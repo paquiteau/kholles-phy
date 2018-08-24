@@ -1,0 +1,14 @@
+\begin{Exercise}[title=Pont de Wien]
+	Déterminer l'expression de la tension $s$ pour une entrée $e$ indicielle, on supposera les condensateurs initialement déchargé.
+	\begin{center}
+		\begin{circuitikz}
+			\draw (0,0) to[V,v=$e$] (0,2) to[R] (2,2) to[C] (4,2) to[R](4,0);
+			\draw (4,2)--(5,2) to[C,v^<=$s$](5,0) --(0,0);
+		\end{circuitikz}
+	\end{center}
+\end{Exercise}
+\begin{Answer}
+	$H(j\omega)= \frac{1}{1+3jRC\omega + (jRC\omega)^2}$ \\
+	Réponse à un échelon : A l'instant initial $s$ continue donc $i$ continue tension au borne des condo nulles : $i(0^+)=E/R$.
+	Avec la LdM dérivée : $Ri'(0^+)+i(0^+)/C+i_2(0^+)/C =0$ or $i=i_2$ donc $i'(0^+)=\frac{-2E}{R^2C}$
+\end{Answer}

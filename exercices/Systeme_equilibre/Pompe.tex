@@ -1,0 +1,14 @@
+\begin{Exercise}[title=Pompe]
+		On considère deux réservoirs $R$ et $R'$ de même volume $V$ tout deux initialement à la pression $P_0$. Ils sont relié par un sas de volume $v$, et deux valves permettent d'ouvrir le sas sur chacun des deux réservoirs.
+		Périodiquement on rempli le sas en aspirant de l'air depuis $R'$ , on attend l'équilibre et on vide alors le sas  dans $R$.
+
+		\Question Décrire l'évolution de chacun des réservoirs qualitativement puis faire les calculs.
+		\Question Combien a raison d'un cycle par seconde, combien de temps faut il pour gonfler une roue de vélo ? Quelles hypothèses remettent en cause votre calcul ?
+\end{Exercise}
+\begin{Answer}
+  \Question On assimile l'air à un Gaz Parfait.
+  Dans $R'$ on a $P_1'= \frac{n_0T_0R}{V} = \frac{P_0 V}{V+v}$\\
+  Puis par récurrence $P_n'= P_0 \left(\frac{V}{V+v}\right)^n$
+  De plus par conservation de la matière: $ 2n_0=n'_k+n_k \implies 2P_0=P'_k+P_k$
+  Donc $P_n = 2P_0- P_0\left(\frac{V}{V+v}\right)^n$
+\end{Answer}

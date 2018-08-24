@@ -1,0 +1,15 @@
+\begin{Exercise}[title=]
+  Étudier le filtre suivant( comportement asymptotique, fonction de transfert,
+  diagramme de bode...)
+	\begin{center}
+		\begin{circuitikz}
+			\draw (0,0) to[open,v=$U_e$] (0,2) to[R] (2,2) to[R] (4,2);
+			\draw (2,0)to[C](2,2) ;
+			\draw (4,0)to[C,v_=$U_s$](4,2);
+			\draw (0,0)--(4,0);
+		\end{circuitikz}
+	\end{center}
+\end{Exercise}
+\begin{Answer}
+	$ u_e = u_s + 3RC \dot{u_s} + (RC)^2\ddot{u_s}$ donc $H(j\omega)= \frac{1}{1+3jRC\omega+(jRC\omega)^2}$
+\end{Answer}

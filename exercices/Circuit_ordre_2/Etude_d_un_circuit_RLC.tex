@@ -1,0 +1,30 @@
+\begin{Exercise}[title=Étude d'un circuit RLC]
+	On considère un circuit composé d'un condensateur $C$ d'une bobine $L$ et d'une résistance $R$ en série. Le condensateur et la bobine sont initialement déchargés. Le circuit est alimenté par un générateur de tension parfait de f.é.m $E(t)$.
+	\Question Dans cette question, la tension $E(t)$ est un échelon de valeur $E_0$ pour $t>0$
+		\subQuestion Exprimer l'équation différentielle vérifiée par la tension $U_c$ au bornes du condensateur.
+		\subQuestion Donnez la forme générale des solutions
+		\subQuestion Proposez un solution particulière.
+		\subQuestion Tracez qualitativement sur un même graphique $U_c$et $E$ au cours du temps.
+	\Question Dans cette question $E(t)=E_0\cos(\omega t)$ pour $t>0$
+		\subQuestion Exprimez l'équation différentielle vérifiée par la tension $U_c$ aux bornes du condensateur. Quelle difficulté
+		supplémentaire apparaît par rapport au cas précédent ?
+		\subQuestion Justifez l'approximation suivante : si on se place à un temps suffisamment grand, on peut négliger les
+		solutions de l'équation homogène associée.
+		\subQuestion  On cherche une solution particulière sous la forme $U_c(t)=U_c^0 \cos(\omega t +\varphi_c)$. Justifiez cette forme et réecrivez l'équation différentielle en introduisant une notation complexe.
+		\subQuestion Montrer que pour une certaine valeur de $\omega$ l'amplitude $U_c^0$ est maximale.
+\end{Exercise}
+\begin{Answer}
+	\Question
+		\subQuestion $u_c + RC\dot{u_c}+LC\ddot{u_c} = E_0$
+		\subQuestion $u_c = A\e^{t/r_1} + B\e^{t/r_2}$ ($r_1$ , $r_2$ racine du polynôme caractéristique)
+		\subQuestion $u_p=E_0$
+	\Question
+		\subQuestion $u_c + RC\dot{u_c}+LC\ddot{u_c} = E_0$
+		\subQuestion la solution homogène tend vers 0. (ARQS)
+		\subQuestion solution de la meme forme que le second membre. l'équation
+        devient:
+        $\underline{U_c}+jRC\omega \underline{U_c}+
+        LC(j\omega)^2\underline{U_c}=E_0$ avec $\underline{U_c}=U_ce^{j\phi}$
+        $U_c= \left|\frac{E_0}{1+RCj\omega-LC\omega^2}\right|$ maximal si le dénominateur
+        s'annule.
+\end{Answer}

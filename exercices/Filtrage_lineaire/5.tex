@@ -1,0 +1,14 @@
+\begin{Exercise}[title=]
+	Étudier le filtre suivant
+	\begin{center}
+		\begin{circuitikz}
+			\draw (0,0) to[open,v=$U_e$] (0,2) to[R] (2,2) -- (3,2);
+			\draw (2,0)to[C](2,2) ;
+			\draw (3,0)to[L,v=$U_s$,mirror](3,2);
+			\draw (0,0)--(3,0);
+		\end{circuitikz}
+	\end{center}
+\end{Exercise}
+\begin{Answer}
+	\Question $H(j\omega) = \frac{j\frac{L}{R}\omega}{1+j\frac{L}{R}\omega+j^2LC\omega^2}$
+\end{Answer}

@@ -1,0 +1,46 @@
+\begin{Exercise}[title=Cycle de Stirling moteur]
+		Dans un moteur de stirling, une masse d'air ($m=2,9g$ suit une évolution cyclique réversible $ABCD$) constituée de deux isothermes $AB$ et $CD$ séparée par deux isochores $BC$ et $DA$. les températures et les pressions aux points $A$ et$C$ sont \gdr{T_A}{290}{K}; \gdr{p_a}{1,00}{bar}; \gdr{T_C}{1450}{K} ; \gdr{p_c}{40}{bar}.Et on a le rapport volumétrique $\alpha_V = V_a /V_c  = 8$. On assimile le gaz à un parfait diatomique de masse molaire \gdr{M}{29}{\g\per\mole} de coefficient calorimétrique $\gamma= 1,4$ qui suit une évolution cyclique réversible.
+		\Question Quelle équation relie $P$et $V$ le long des courbes $AB$ et $CD$. En déduire les états $B$ et $D$ ($p,V,T$).
+		\Question Représenter le cycle $ABCD$ sur le diagramme de clapeyron.
+		\Question Sachant que le cycle est utilisé en cycle moteur, dans quel sens est il parcouru?.
+		\Question Calculer le travail et le transfert thermique reçus (algébriquement) par le gaz sur chaque portion de cycle.
+		\Question Vérifier que les variation de l'énergie interne sont nulles.
+
+		\emph{ Les échanges thermique au cours des isochores se font à l'aide d'un régénérateur interne. Les seuls échanges thermiques avec l'extérieur ont lieu pendant les isothermes. On défini le rendement du moteur comme le rapport du travail fourni au milieu extérieur sur la chaleur reçue de la part de la source chaude (portion $CD$ du diagramme)}
+		\Question Calculer le rendement $\eta$ du moteur Stirling.
+		\emph{le rendement maximal pour un moteur ditherme est $\eta_{max}=1-\frac{T_A}{T_C}$ ($T_A< T_C$)}
+		\Question Que pensez vous du rendement du moteur Stirling ?
+\end{Exercise}
+\begin{Answer}
+		\Question $\begin{cases}
+		P(V) = \frac{nRT_A}{V} \text{Sur AB}\\
+		P(V) = \frac{nRT_C}{V} \text{Sur CD}
+		\end{cases}$
+		On a donc
+		\begin{center}
+			\begin{tabular}{|c|c|c|c|}
+				~ & $p$			& $T$   	& $V$ \\ \hline
+				A & \SI{1}{bar}	&\SI{290}{K}& 2,4L \\ \hline
+				B & \SI{8}{bar}	&\SI{290}{K}& 0,30L \\ \hline
+				C & \SI{40}{bar}&\SI{1450}{K}& 0,30L\\ \hline
+				D & \SI{5}{bar} &\SI{1450}{K}& 2,4L \\ \hline
+			\end{tabular}
+		\end{center}
+
+		Sur le diagramme $P-V$ on a donc:
+		\Question Le cycle est moteur, donc parcouru dans le sens horaire.
+		\Question On rappelle $\Delta U_{1\to2} = C_v \Delta T =\frac{nR}{\gamma -1} \Delta T$ on a donc \gdr{C_v}{2,08}{\J\per\K}
+		on a donc : \[\begin{cases}
+		\Delta U_{BC} = 2,4 kJ = Q_{BC}\\
+		\Delta U_{DA} = -2,4 kJ= Q_{DA}\\
+		\Delta U_{AB} = \Delta U_{CD} = 0 \\
+		\end{cases}\]
+		Les transformation isochore sont caractérisée par un travail nul d'où $W_{BC} =W_{DA}=0$.
+		les transformations isothermes sont caractérisée par une variation d'énergie interne nulle. elles sont mécaniquement réversible, on peux donc calculer les travaux :
+		\[\begin{cases}
+		W_{AB}= -Q_{AB} = \int_{V_A}^{V_B} -P(V)dV = -nRT_A\ln(V_B/V_A) = 0,5kJ\\
+		W_{CD}= -Q_{CD} = \int_{V_C}^{V_D} -P(V)dV = -nRT_C\ln(V_D/V_C) = -2,50kJ
+		\end{cases}\]
+		\Question immédiat.
+		\Question $\eta=\eta_{max} = 0.8$. (réversibilité ! )
+\end{Answer}

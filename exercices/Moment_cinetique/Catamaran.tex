@@ -1,0 +1,25 @@
+\begin{Exercise}[title=Catamaran]
+	SCHEMA
+	On considère le modèle d'un catamaran représenter sur la figure suivante:
+	Cet exercice s'intéresse au condition d'équilibre du catamaran sur l'eau.
+	\Question Exprimer la variation de la poussée d'archimède quand un réservoire s'enfonce d'un niveau $\epsilon$.
+	\Question on considère la situation suivante:
+	\subQuestion Décrire qualitativement l'évolution du système
+	\subQuestion À quelle condition sur la position du centre de gravité le catamaran retrouve-t-il l'équilibre ?
+\end{Exercise}
+\begin{Answer}
+	\Question On a $\vec{\Pi} = -\rho_{eau}V_{im}\vec{g}$. En s'enfonçant de $\epsilon$ on a une variation de volume $\Delta V = 2RL \epsilon $ donc $\Delta \vec{\Pi} = -\rho_{eau}2RL\epsilon\vec{g}$.
+	\Question $\vec{Pi}= -\frac{m}{2}g -\rho_{eau}2RL\epsilon \vec{g}$
+	On a  $\epsilon_1 = \xi +a \theta$ et $\epsilon_2 = \xi -a\theta$.
+	Dans une situation de quasi équilibre on a:
+	\[\vec{\Pi}_1+\vec{\Pi}_2+\vec{P} = \vec{0} \implies \xi = 0 \]
+	On applique le TMC en G :
+	$\vec{\mathcal{M}}(\vec{\Pi}_{A1}) + \vec{\mathcal{M}}(\vec{\Pi}_{A1}) = J \ddot{\theta} \vec{z}$
+	on a $\mathcal{M}_{G}(\vec{\Pi_1}) = (h\theta-a)\left(\frac{mg}{2}+2\rho g  R L a\theta \right)$
+	Ainsi
+	\[
+	\theta (\frac{mgh}{2} -4\rho_{eau} RL ga^2) = J \vec{\theta}
+	\]
+
+	Stable si $ h\leq \frac{4\rho RLa^2}{m}$
+\end{Answer}

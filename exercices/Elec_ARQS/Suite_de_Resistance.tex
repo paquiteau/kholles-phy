@@ -1,0 +1,25 @@
+\begin{Exercise}[title=Suite de Résistance]
+  On considère la suite de résistance suivante avec $R_0=R$ :
+  \begin{center}
+	  \begin{circuitikz}
+		  	\draw (0,0) to[short,-*] ++(2,0) coordinate(left)
+		  	to[R=$R_n$, name=r] ++(2,0)
+		  	to[R=$R$,-*] ++(2,0) coordinate(right)
+		  	to[short] ++(2,0)
+
+		  	(left) to[short] ++(0,1)
+		  	to[R=$R$, name=c] ($(right)+(0,1)$)
+		  	to[short] (right)
+
+		  	node[fit={(left)(right)($(c.north)+(0,.5)$)(r)},draw, dashed, label={$R_{n+1}$},
+		  	inner sep=10pt] {};
+
+	  \end{circuitikz}
+  \end{center}
+  \Question Calculer $R_1$ ,$R_2$ ,$R_3$ \Question Déterminer
+  $R_{n+1}$ en fonction de $R_n$.  \Question Montrer que la suite
+  converge.  \Question Quelle est sa limite?
+\end{Exercise}
+\begin{Answer}
+  $R_{lim} = R\phi$
+\end{Answer}

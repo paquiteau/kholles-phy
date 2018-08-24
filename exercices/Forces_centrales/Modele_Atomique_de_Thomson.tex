@@ -1,0 +1,53 @@
+\begin{Exercise}[title=Modèle Atomique de Thomson]
+  En 1904, le physicien anglais Joseph John \textsc{Thomson} proposa de présenter
+  l'atome d'hydrogène par un nuage sphérique de centre $0$ , de rayon $R$ et de
+  charge $+e$ uniformément répartie. À l'intérieur de cette sphère, fixe
+  dans le référentiel du laboratoire, se déplace librement un électron de masse
+  $m$ ponctuelle et de charge $-e$ .
+  En l'absence de toute action extérieur l'électron $M$ est soumis à la seule
+  force électrostatique.
+  \emph{Donnée:\gdr{m}{9.11e-31}{kg} , \gdr{e}{1,6e-19}{C} ,
+    \gdr{C=\frac{1}{4\pi\epsilon_0}}{9e9}{USI}, vitesse de la lumière dans le vide
+    \gdr{c}{3e8}{\m\per\s}}. \\
+  Équation d'une ellipse en coordonnées cartésienne avec origine en O , d'axe de
+  symétrie Ox et Oy : $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$
+    \Question Montrer qu'il y a conservation du moment cinétique en$O$ de
+    l'électron et déterminer sa valeur en fonction de $r_0$ , $v_0$ et $m$ .En
+    déduire que son mouvement reste confiné dans le plan $( Oxy )$.
+    \Question Exprimer ma pulsation $\omega_0$ du mouvement de $M$ en fonction de
+    $\epsilon_0,e,m,R$ calculer la valeur de R pour laquelle la pulsation $\omega_0$ correspond
+    à la fréquence $\nu_0$ d'une des raies du spectre de Lyman de l'atome d'hydrogène
+    (\gdr{\lambda_0}{121.8}{nm})
+    \Question Montrer que la trajectoire du point M est une ellipse (ellipse de
+    Hooke) , dont vous préciserez les caractéristiques.
+    \Question À quelle condition cette trajectoire est circulaire? Que se
+    passe-t-il si $v_0=0$?
+    \Question L'électron accéléré perd de l'énergie par rayonnement. tenir
+    compte de ce phénomène, une force supplémentaire de freinage est introduite.
+    Elle a la forme d'une force de frottement de type visqueux :
+    $\vec{f}=-h\vec{v} $, où h , coefficient de freinage, est positif.
+    \subQuestion Quelle est l'évolution du moment cinétique en O de l'électron
+    au cours du temps?
+    \subQuestion Dire qualitativement ce que sera le mouvement de l'électron pour de
+    faibles amortissements.
+    \subQuestion Commenter quant à la stabilité de l'atome.
+\end{Exercise}
+\begin{Answer}
+	\Question TMC en O : force central ,moment cinétique conservé. en $t=0$ on a $\vec{L}_{O}(M) = mr_0v_0\vec{e_z}$.
+	$\forall t \vec{L} \perp \vec{OM}$ donc la trajectoire est dans le plan de normal $\vec{e_z}$.
+	\Question PFD:
+	$m\ddd{\vec{OM}}{t} =-k\vec{OM} \implies \ddd{\vec{OM}}{t} + \omega_0^2 \vec{OM} = \vec{0}$ avec $\omega_0=\sqrt{\frac{1}{4\pi\epsilon_0}\frac{e^2}{mR^3}}$
+	On a donc \[R=\left(\frac{\lambda_0^2}{16\pi^3\epsilon_0}\frac{e^2}{mc^2} \right)^{1/3}\equals_{A.N.} 100 pm \]
+	\Question
+	$\vec{OM} = r_0\cos(\omega_0t)\vec{e_x}+\frac{v_0}{\omega_0}\sin(\omega_0t)\vec{e_y}$
+	on a une ellipse de centre $O$ de demi-grand axe $a$ selon $Ox$ et de demi-petit axe $b$ selon $Oy$.
+	\Question circulaire si $v_0=r_0\omega_0$ si la vitesse initiale de l'electron est nulle $b=\frac{v_0}{\omega_0}=0$. L'ellipse s'assimile a un segment $2a$ (OH a une dimension)
+	\Question force de freinage avec un moment en O, le TMC devient:
+	\[\dd{\vec{L}_{M/O}}{t} = \mathcal{M}_O(\vec{F})+<\mathcal{M}(\vec{f}) = \vec{0} - \frac{h}{m}\vec{L}_{M/O}
+	\]
+	Alors $\vec{L}_{M/O}{t} =\vec{L}_{M/O}{t}(0)e^{-\frac{t}{\tau}} $ avec $\tau=\frac{m}{h}$.
+	Le moment cinétique tend à s'annuler.
+	l'équation du mouvement devient
+	\[\ddd{\vec{OM}}{t} + \frac{\omega_0}{Q}\dd{\vec{OM}}{t} \omega_0^2 \vec{OM} = \vec{0}\]
+	Avec $Q=\frac{m\omega_0}{h}$ et $\omega_0=\sqrt{\frac{k}{m}}$
+\end{Answer}

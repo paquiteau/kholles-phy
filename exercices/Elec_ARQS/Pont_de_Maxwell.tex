@@ -1,0 +1,24 @@
+\begin{Exercise}[title=Pont de Maxwell]
+  On considère à présent le montage suivant, dans lequel la valeur
+  d'impédance de la bobine et la résistance sont inconnues. On peut
+  faire librement varier $R_1$, tandis que les autres valeurs sont
+  connues. Lorsque le pont est équilibré, on a $R_1=$
+  \SI{1}{\kilo\ohm} $R_2=$\SI{42}{\kilo\ohm} $R_3=$\SI{100}{\ohm} et
+  $C=5nF$. Déterminer r et L.
+  \begin{center}
+    \begin{circuitikz}[scale=0.7]
+      \ctikzset{bipoles/length=1cm} \draw (0,-2) to[short,-*] (0,3)node[left]{A}
+      to[R,l=$R_1$] (3,6) --(4,5)
+      --(3.5,4.5)to[R,l_=$R_2$](4.5,3.5)--(5,4)to[short,-*] (6,3)node[right]{B}
+      -- (6,-2) to[V,l=$E$] (0,-2); \draw (4,5) --(4.5,5.5)
+      to[C,l=$C$](5.5,4.5) --(5,4); \draw (0,3) to[R,l=$r$]
+      (1.5,1.5)to[L,l=$L$](3,0) to[R,l=$R_3$] (6,3); \draw (3,0)
+      to[open ,v=$u$] (3,6);
+    \end{circuitikz}
+  \end{center}
+\end{Exercise}
+\begin{Answer}
+  $u = \left[
+    \frac{r+jL\omega}{r+R_3+jL\omega}-\frac{R_1(1+jR_2C\omega)}{R_2+R_1(1+jR_2C\omega)}\right]E$
+  alors $r= \frac{R_1R_3}{R_2}$
+\end{Answer}

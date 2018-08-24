@@ -1,0 +1,33 @@
+\begin{Exercise}[title=Brisure de symétrie]
+  Une masse M$(m)$ est attachée à un ressort de longueur à vide $l_0$ et de
+  constante de raideur $k$.
+  La masse glisse sans frottement le long de l'axe horizontal et le ressort est
+  attaché à une distance R verticale de cet axe.
+  \Question En prenant comme référence $E_p(x=0)=0$ montrez que l'énergie
+  potentielle à pour expression
+  $E_p=\frac{1}{2}\left(\left(\sqrt{R^2+x^2}-l_0\right)^2-(R-l_0)^2\right)$
+  \Question Comment déterminer l'existence de positions d'équilibre dans le cas
+  d'un système à un degré de liberté ? En séparant les cas $R > l_0$ et $R<l_0$ ,
+  étudiez l'existence de positions d'équilibre $x_{eq}$ .
+  \Question Comment déterminer la stabilité des positions d'équilibre dans le
+  cas d'un système à un degré de liberté ?
+  Caractérisez chacune des positions trouvées précédemment.
+  \Question Tracez une courbe $x_{eq} = f(R)$ . Pourquoi dit-on d'un tel système
+  qu'il présente une bifurcation ?
+
+\end{Exercise}
+\begin{Answer}
+  \Question la force exercé sur la masse m est $\vec{f}=-k(RM-l_0)\vec{RM}$
+  ainsi l'énergie potentielle associée est : (en intégrant entre 0 et x)
+  $E_p=\frac{1}{2}\left(\left(\sqrt{R^2+x^2}-l_0\right)^2-(R-l_0)^2\right)$
+  \Question on étudie $\deriv{E_p}{x}=\dots=kx \left( 1-\frac{l_0}{\sqrt{R^2+x^2}} \right)$
+  les solutions sont:
+  $
+  \begin{cases}
+    x=0 \text{ instable } \\
+    x=\pm\sqrt{l_0^2-R^2} \text{ si } R<l_0 \text{ stable}
+  \end{cases}
+  $
+  \Question Un changement du paramètre R conduit à un systeme résolument
+  différent (nombre et stabilité des positions d'équilibre)
+\end{Answer}

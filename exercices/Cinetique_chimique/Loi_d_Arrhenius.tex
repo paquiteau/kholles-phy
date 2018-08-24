@@ -1,0 +1,19 @@
+\begin{Exercise}[title=Loi d'Arrhénius]
+	La constante de vitesse $k$ de la réaction $2N_2O_5 \to 4 N0_2 +O_2$ d'ordre 1  a été mesuré pour différente températures:
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|}
+			\hline
+			T(\si{\celsius})         & 25   & 35   & 55   & 65  \\
+			\hline
+			\SI{1e5}{k}(\si{\per\s}) & 1.72 & 6.65 & 75.0 & 240 \\
+			\hline
+		\end{tabular}
+	\end{center}
+	\Question Calculer l'énergie d'activation et le facteur de fréquence de cette réaction.
+	\Question Calculer la valeur de la constante de vitesse à \SI{30}{\celsius}
+\end{Exercise}
+\begin{Answer}
+	\Question D'après la loi d'Arrhénius, $k = A \e^{\frac{-E_a}{RT}}$ ; $\ln{k}=\ln{a}-\frac{E_a}{RT}$ on effectue une régression inéaire entre $\ln(k)$ et $\frac{1}{T}$.On obtient : $|r| = 0.99996$; pente: a=\num{-1.239e4}. ordonnée à l'origine b=\num{30.62}. 
+	D'où: $E_a= -aR$= \SI{103}{\kilo\J\per\mol} et le facteur de fréquence $A=$\SI{2e13}{\per\s}
+	\Question À \SI{30}{\celsius} $k$= \SI{3.4e-5}{\per\s}
+\end{Answer}

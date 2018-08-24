@@ -1,0 +1,47 @@
+\begin{Exercise}[title=(*) Vecteur de Runge-Lentz]
+  On considère une particule ponctuelle $M$ de masse m dont la position est
+  repérée par ses coordonnées cylindrique $(r,\theta,z)$ dans un reférentiel
+  $\mathcal{R}$  galilléen de repère $(Oxyz)$. Sa vitesse dans $\\mathcal{R}$
+  est notée$\vec{v}$. La particule est plongé dans un champs de force dérivant
+  du potentiel $V(r)=-\frac{\alpha}{r}$ (avec $\alpha>0$)
+  \Question Montrer que moment cinétique reste constant. Exprimer sa projection
+  sur l'axe $z$ en fonction de $m,r,\dot{\theta}$. Cette relation est un intégrale
+  première du mouvement.
+  \Question Montrer que l'énergie $\mathcal{E}=\mathcal{E_c}+V(r)$ est une
+  intégrale première du mouvement. exprimer $\mathcal{E}$ en fonction de
+  $r,\dot{r},\dot{\theta},m$ et $\alpha$
+  \Question
+  \subQuestion Montrer que le vecteur $\vec{A}=\vec{v}\wedge
+  \vec{L_{O/\mathcal{R}}}-\alpha \frac{\vec{r}}{r}$ est une intégrale première.
+  Comment sont disposé l'un par rapport à l'autre les vecteurs $\vec{A}$
+  et$\vec{L_{O/\mathcal{R}}}$ ? Quelles sont les coordonées polaire de $\vec{A}$
+  on note $\vec{e_x}$ la direction de $\vec{A}$ (soit $A_x=A$) montrer que dans
+  ces conditions $r,\dot{\theta}$ et $\dot{r}$  peuvent être exprimer comme des
+  fonctions de la seule variable $\theta$ et des constantes du problème. donner ces
+  expression.
+  \subQuestion Mettre l'expression de $r$ sous la forme
+  ($r=\frac{p}{1+e\cos(\theta)})$  À quelle courbe correspond cette fonction?
+  Exprimer $p$ et $e$ en fonction des paramètres $L_z,A,m$ et $\alpha$
+  \subQuestion Calculer $\mathcal{E}$ et $a=\frac{p}{1-e^2}$ en fonction des
+  mêmes paramètres. Quelle valeur maximale $A_{max}$peux prendre $A$ pour que le
+  mouvement reste de dimension finie? Pour une valeur de $A$ inférieur à
+  $A_{max}$ tracer l'allure de la courbe indiquant la position du vecteur
+  $\vec{A}$
+
+\end{Exercise}
+\begin{Answer}
+  \Question $L_z=mr^2\dot{\theta}$
+  \Question
+  $\mathcal{E}=\frac{1}{2}(\dot{r}^2+\dot{r}^2\dot{\theta}^2)-\frac{\alpha}{r}=Cste$
+  \Question
+  \subQuestion $\vec{A}\perp \vec{L_O}$;$A_r=mr^3\dot{\theta}^2-\alpha$ et
+  $A_\theta=-mr^2\dot{r}\dot{\theta}$ avec la constante des aires
+  $C=r^2\dot{\theta}=\frac{L_z}{m}$ on a pour
+  $\vec{A}=A\cos(\theta)\vec{e_r}-A\sin(\theta)\vec{e_\theta}$ , $r=\frac{L_z^2}{\alpha
+    m}\frac{1}{1+\frac{A}{\alpha}\cos\theta}$ et
+  $\dot{\theta}=\frac{L_z}{mr^2}=\frac{m}{L_z^3}(A\cos\theta+\alpha)^2$;
+  $\dot{r}=\frac{A\sin\theta}{L_z}$
+  \subQuestion $p=\frac{L_z^2}{\alpha m}$ et $e=\frac{A}{\alpha}$
+  \subQuestion $\mathcal{E}=\frac{m}{2L_z^2}(A^2-\alpha^2)$ et $a=\frac{\alpha
+    L_z}{m(\alpha^2-A^2)}$
+\end{Answer}

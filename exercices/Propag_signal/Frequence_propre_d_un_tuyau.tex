@@ -1,0 +1,29 @@
+\begin{Exercise}[title=Fréquence propre d'un tuyau]
+	La colonne d'air contenue dans un instrument à vent (flûte , clarinette... ) ou dans un tuyau d'orgue vibre selon des modes propres conditionsorrespondant à des conditions aux limites données. Dans une modélisation très simple on envisage deux type de  conditions:
+	\begin{itemize}
+		\item Si l'extrémité du tuyau est ouverte, la surpression accoustique est nulle à cette extrémité.
+		\item Si l'extrémité du tuyau est fermé, la surpression est maximale à cette extrémité.
+	\end{itemize}
+	\Question On considère un tuyau de longueur $L$ dans lequel la  célérité des ondes sonores est $c$.
+	\subQuestion Déterminer les fréquences des modes propres du tuyau lorsque ses deux extrémités sont ouvertes. Représenter schématiquement la surpression dans le tuyau pour le troisième mode ( classé par fréquence croissante).
+	\subQuestion Idem pour une extrémité fermé
+	\Question Les grandes orgues peuvent produire des notes très graves.
+    Calculer la longueur d'onde d'un son de fréquence $34$ Hz correspondant au
+    Do$^0$ en prenant la vitesse du son à 0 $^o$C dans l'air : $c=331~m/s$. Calculer la longueur minimale d'un tuyau produisant cette note.
+	\Question On peux modéliser très grossièrement une clarinette par un tube fermé au niveau de l'embouchure.
+	\subQuestion Expliquer pourquoi le son produit par une clarinette ne comporte que des harmoniques impaires.
+	\subQuestion l'instrument , muni d'une "clé de douzième" qui ouvre le trou situé à une distance $\frac{L}{3}$ de l'embouchure.Lorsque ce trou est ouvert la surpression est nulle en ce point. Quelles sont dans ce cas les longueurs d'ondes des modes propres du tuyau? quelle est l'effet sur la fréquence du son émis par l'instrument?
+\end{Exercise}
+\begin{Answer}
+	\Question
+	\subQuestion si les deux extrémités sont ouverte, on a des nœuds de surpression acoutisque. Or la distance entre deux nœud est un multiple de la demi-longueur d'onde. On a donc nécessairement:
+	\[L= n \frac{\lambda}{2} = n\frac{c}{2f} \text{ soit } f=f_n=n\frac{c}{2L}\]
+	\subQuestion Il y a un nœud de surpression acoustique à l'extrémité ouverte du tuyau et un ventre de surpression acoustique à l'extremité fermée.
+	\[L=\frac{\lambda}{4}+\frac{n\lambda}{2}=\left(n+\frac{1}{2}\right)\frac{c}{2f} \text{ soit }f=f'_n=(2n+1)\frac{c}{4L}\]
+	\Question $\lambda=\frac{c}{f_{Do^0}}=10,3 m$ avec un extrémité fermé on a $L=\frac{\lambda}{4}=2,6m$
+	\Question
+	\subQuestion les modes propres sont des multiples impaire du fondamentale car une extrémité est fermée.
+	\subQuestion On a un nœud a $\frac{L}{3}$ et un ventre à l'embouchure:
+	\[ \frac{L}{3}=(2n+1)\frac{\lambda}{4} \text{ soit } f=f''_n=(2n+1)\frac{3c}{4L}\]
+	La fondamentale est multiplié par 3 ( saut d'un octave + quinte = douzième)
+\end{Answer}

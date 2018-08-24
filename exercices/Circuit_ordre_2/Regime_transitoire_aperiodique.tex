@@ -1,0 +1,14 @@
+\begin{Exercise}[title=(*) Régime transitoire apériodique ]
+	A t= $0^-$  les condensateurs sont déchargés On ferme alors l'interrupteur.
+	\Question Exprimer $i(t)$.
+	\begin{center}
+		\begin{circuitikz}
+			\draw (0,0) to[V,v=$E$](0,2) to[R,i=$i$] (2,2);
+			\draw (2,2) to[C,i^=$i_1$] (2,0) -- (4,0) to[R,i^<=$i_2$] (4,2) to[C](2,2);
+			\draw (0,0) to[spst] (2,0);
+		\end{circuitikz}
+	\end{center}
+\end{Exercise}
+\begin{Answer}
+$0= i + RCi'+(RC)^2 i'' $ et $ i(0) = i'(0)=0$
+\end{Answer}

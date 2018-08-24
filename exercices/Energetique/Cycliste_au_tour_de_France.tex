@@ -1,0 +1,33 @@
+\begin{Exercise}[title=Cycliste au tour de France]
+  Un cycliste assimilé à un point matériel se déplace en ligne droite. Il
+  fournit un e puissance mécanique constante $P$ les forces de frottement de
+  l'air sont proportionnelles au carré de la vitesse $v$ du cycliste. On néglige
+  les forces de frottement du sol.
+  	\Question Déterminer une équation différentielle sur la vitesse et la mettre
+    sous la forme \[mv^2\dd{v}{x} = k (v_l^3-v^3)\]
+    Où $k$ est la coefficient de frottement fluide et $v_l$ une constante
+    homogène à une vitesse à déterminer.
+    \Question on pose $f = k (v_l^3-v^3)$.
+	\subQuestion Déduire de la question précédente l'équation différentielle vérifiée par $f$.
+	\subQuestion Déterminer l'expression de la vitesse en fonction de x, s'il
+    aborde une ligne droite avec une vitesse $v_0$.
+    \subQuestion Application numérique : Déterminer $k$ et la distance
+    nécessaire pou atteindre $v_l$. On donne la puissance du cycliste
+    \gdr{P}{2}{kW} \gdr{v_l}{20}{\m\per\s} et \gdr{m}{85}{kg}.
+\end{Exercise}
+\begin{Answer}
+	\Question
+    TEC: \[\dd{E_c}{t}=\mathcal{P}(m\vec{g})+\mathcal{P}(\vec{F_f})+\mathcal{P}(\vec{R})+P\]
+	\[mv\dd{v}{t} = P-kv^3\]
+    Alors avec $\dd{v}{t}=\dd{v}{x}v$ on a :
+    \[mv^2\dd{v}{x}=k(v_l^3-v^3)\]
+	avec $v_l = \left(\frac{P}{k}\right)^{1/3}$ vitesse limite ou la puissance
+    du cycliste compense les pertes.
+    \Question
+	\subQuestion on mets l'équation précédente sous la forme :
+	\[f(x)-\frac{m}{3k}f'(x) = 0\]
+	\subQuestion Alors on pose : $L=m/3k$ et on a : $f(x)=A\exp(-x/L)$ puis
+	\[v(x)=v_l\left(1-\left(1-\left(\frac{v_0}{v_l}\right)^3\right)\exp\left(-\frac{x}{L}\right)\right)^{1/3}\]
+	L est la distance caractéristique pour atteindre la vitesse limite.
+	\subQuestion Avec $P=2kW$ et $v_l=20m/s$ on a \gdr{k}{0.25}{\kg\per\m}et \gdr{L}{113}{m}.
+\end{Answer}

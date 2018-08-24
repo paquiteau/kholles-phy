@@ -1,0 +1,43 @@
+\begin{Exercise}[title=Cube flottant]
+  Un cube de côté a, de masse volumique $\rho_c$ , flotte en équilibre dans un
+  liquide de masse volumique $\rho_L$ $(\rho_L > \rho_c)$. Les conditions sont
+  telles que le cube ne bascule pas, gardant toujours sa face inférieure
+  horizontale. On ne prend pas en compte la pression de l’air, ni les
+  frottements visqueux avec le fluide. On choisit un repère dont l’origine se
+  situe au niveau de la base du cube lorsqu’il est à l’équilibre dans le fluide.
+  A l’instant $t = 0$ on enfonce le cube dans le fluide (hauteur de cube
+  immergée $h_0$) et on le lâche sans vitesse initiale.
+  \Question Établir l’équation différentielle du mouvement dans le cas où $h_0<a$.
+  \Question En déduire l’équation du mouvement du cube en fonction du temps. Préciser la
+  période des oscillations
+  \Question Quelle doit être la valeur de $h_0$ pour
+  que le cube puisse bondir hors du liquide ?
+\end{Exercise}
+\begin{Answer}
+  \Question Référentiel: terrestre supposé galiléen.\\
+  Système : le cube de masse constante $m = \rho ca^3$ \\
+  Repère : R(O,$\vec{k}$) avec O à la base du cube à l’équilibre et $\vec{k}$
+  dirigé vers le bas.\\
+  Mouvement : mouvement rectiligne vertical. \\
+  Système de coordonnées cartésiennes, position de la base du cube  $z=zbase$.\\
+  Cinématique: $\vec{OM}= z\vec{k} ; \vec{v} = \dot{z}\vec{k} ; \vec{a}=
+  \ddot{z}\vec{k}$\\
+  Forces extérieures :\\
+  Forces à distance : poids du cube
+  $\vec{P} = m_{cube} g\vec{k} = \rho ca^3 g \vec{k}$ \\
+  Forces de contact : poussée d’Archimède $\vec{F} = -m_l g \vec{k} -\rho_l a^2(h_{eq} + z)g\vec{k}$
+  où$h_{eq}$ est la hauteur immergée à l’équilibre. \\
+  PFD Oz:$ \rho ca^3g -\rho_L(h_{eq} + z)g = \rho_ca\ddot{z}$ La situation d’équilibre
+  telle que $\ddot{z}= 0 $ et $z = 0$ donne la hauteur immergée à l’équilibre
+  $h_{eq} =\frac{\rho_c}{\rho_l}a$ L’équation différentielle du mouvement est
+  donc :$\ddot{z}+\frac{g\rho_L}{a\rho_c}z=0$
+  \Question \emph{attention aux CI}
+  $z= (h_0-h_{eq})cos(\omega t)$ et $T=2\pi\sqrt{\frac{a\rho_c}{g\rho_L}}$
+  \Question Le cube bondit hors de l’eau si la base du cube atteint la surface
+  de l’eau, c’est à dire si la valeur minimale de $z$ vaut $-h_{eq}$ ce qui
+  s’écrit $-(h_0 -h_{eq} ) = -h_{eq} $, d’où la condition $h_0 > 2h_{eq}$ pour
+  bondir hors de l’eau. Avec la condition$ h_0 < a$, ce résultat implique que
+  $h_{eq} < a/2$, c’est à dire $\rho_c < \rho_L/2$. La masse volumique du cube
+  doit donc être inférieure à la moitié de celle du liquide pour que cette
+  situation soit possible.
+\end{Answer}

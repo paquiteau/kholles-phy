@@ -1,0 +1,84 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Template parameters
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%:[
+%%:  {"name":"title", "description":"Title", "default":"Colle de physique", "mandatory":true},
+%%:  {"name":"subtitle", "description":"Subtitle"},
+%%:  {"name":"author", "description":"Author","default":"Pierre-Antoine Comby", "mandatory":true},
+%%:  {"name":"bookoptions", "description":"Options", "type":"flag", "values":["oneexerciseperpage","showchapter","10pt","11pt","12pt"], "join":",", "mandatory":true, "default":["showchapter"]},
+%%:  {"name":"exerciseoptions", "description":"Options", "type":"flag", "values":["exerciseonly","answeronly","answerdelayed","exercisedelayed"], "join":",", "mandatory":true, "default":["exerciseonly"]}
+%%:]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Preamble
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[\getbookoptions,\getexerciseoptions]{exbook}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{eurosym}
+\usepackage[french]{babel}
+
+%usefull packages
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{cancel}
+\usepackage[separate-uncertainty=true]{siunitx}
+  \sisetup{inter-unit-product=\ensuremath{{ }\cdot{ }}}
+  \DeclareSIUnit{\v}{\m\per\s}
+\usepackage{tikz}
+  \usetikzlibrary{shapes}
+\usepackage[european,cuteinductors,siunitx,straightvoltages]{circuitikz}
+  \tikzset{every picture/.style={execute at begin picture={\shorthandoff{:;!?};}}}
+\usetikzlibrary{positioning, fit, calc}
+        
+\input{/home/pierre-antoine/Scripts/Raccourcis.tex} %Custom
+
+%\setcounter{tocdepth}{5} %shows all levels
+%\ListOfExerciseInToc
+%\ExerciseLevelInToc{section}
+
+\author{\getauthor}
+\title{\gettitle}
+\subtitle{\getsubtitle}
+
+% Custom Title
+\renewcommand\maketitle{
+  \@maketitle
+  \thispagestyle{empty}
+}
+
+\def\@maketitle{\newpage
+\markboth{}{}%
+\begin{center}%
+          {\rule{\textwidth}{1mm}}
+   \vfill
+   {\Huge \bfseries\boldmath\@title \par}
+   \bigskip
+   \if!\@subtitle!%
+   \else {\Large \bfseries\boldmath \@subtitle \par}
+   \fi
+   \bigskip
+   {\large \@author \par}
+   \vfill
+          {\rule{\textwidth}{1mm}}
+
+ \end{center}
+ \newpage
+ \thispagestyle{empty}
+}
+\makeatother
+
+%custom command
+\renewcommand{\epsilon}{\varepsilon}
+\newcommand{\gdr}[3]{\ensuremath{#1~=~}\SI{#2}{#3}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+\getexlist
+\end{document}
+

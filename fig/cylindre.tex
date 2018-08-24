@@ -1,0 +1,39 @@
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1}
+\definecolor{ttqqqq}{rgb}{0.2,0,0}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.5]
+\draw[->,color=black] (0,0) -- (8.789163355069434,0);
+\foreach \x in {,2,4,6,8} \draw[shift={(\x,0)},color=black] (0pt,-2pt);
+\draw[color=black] (8.371079036033816,0.09290762645235949) node [anchor=south west] { x};
+\draw[->,color=black] (0,0) -- (0,9.08353989358948);
+\foreach \y in {,2,4,6,8}\draw[shift={(0,\y)},color=black] (-2pt,0pt);
+\draw[color=black] (0.11613453306544924,8.433186508422963) node [anchor=west] { y};
+\clip(-8.305839912164695,-6.339126097502196) rectangle (8.789163355069434,9.08353989358948);
+\draw [line width=2pt] (0,0) circle (5cm);
+\draw [line width=2pt] (0,0)-- (4.083493062396192,2.885322236659567);
+\draw [line width=2pt] (2.184016899221311,1.5431867835391286) -- (2.16237732944931,1.2719366767019253);\draw [line width=2pt] (2.184016899221311,1.5431867835391286) -- (1.921115732946882,1.6133855599576417);
+\draw [shift={(0,0)},line width=2pt]  plot[domain=0:0.6151296931230135,variable=\t]({1*1.4872410296578327*cos(\t r)+0*1.4872410296578327*sin(\t r)},{0*1.4872410296578327*cos(\t r)+1*1.4872410296578327*sin(\t r)});
+\draw [line width=2pt,dash pattern=on 1pt off 1pt] (5,0)-- (5,6.365991819857964);
+\draw [line width=2pt] (4.083493062396192,2.885322236659567)-- (2.3749676747661557,5.303336931403761);\draw [line width=2pt] (0,0)-- (-2.885322236659567,4.083493062396192);
+\draw [line width=2pt] (-1.5431867835391284,2.184016899221311) -- (-1.2719366767019253,2.1623773294493094);
+\draw [line width=2pt] (-1.5431867835391284,2.184016899221311) -- (-1.6133855599576412,1.9211157329468813);
+\draw [->,line width=2pt] (5,6.365991819857964) -- (2.726940729052983,6.365991819857964);
+\begin{scriptsize}
+\draw [fill=uuuuuu] (0,0) circle (2pt);
+\draw [fill=ttqqqq] (4.083493062396192,2.885322236659567) circle (2.5pt);
+\draw[color=ttqqqq] (4.259916565516913,3.381334320075916) node {$I$};
+\draw[color=black] (2.8663021687315218,1.4767279778025464) node {$u_\theta$};
+\draw[color=black] (2.0998142504995565,0.8728284058622096) node {$\theta$};
+\draw [fill=uuuuuu] (5,0) circle (2pt);
+\draw[color=uuuuuu] (5.258673549879775,0.5244248066658614) node {$I_0$};
+\draw [fill=ttqqqq] (5,6.365991819857964) circle (2.5pt);
+\draw[color=ttqqqq] (5.653530962302304,6.865370312039397) node {M(t=0)};
+\draw[color=black] (5.514169522623764,3.520695759754455) node {$l_0$};\draw [fill=ttqqqq] (2.3749676747661557,5.303336931403761) circle (2.5pt);
+\draw[color=ttqqqq] (2.8430752621184316,5.796932607837263) node {M(t)};
+\draw[color=black] (3.888286059707475,4.589133463956589) node {l(t)};
+\draw[color=black] (-0.9893643290413932,2.6148464018439497) node {$u_r$};
+\draw [fill=black] (2.726940729052983,6.365991819857964) circle (2.5pt);
+\draw[color=black] (2.9127559819577016,6.865370312039397) node {$E$};
+\draw[color=black] (4.004420592772925,6.609874339295408) node {$v_0$};
+\end{scriptsize}
+\end{tikzpicture}

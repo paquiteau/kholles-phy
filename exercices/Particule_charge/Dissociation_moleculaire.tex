@@ -1,0 +1,75 @@
+\begin{Exercise}[title=Dissociation moléculaire]
+  On s'intéresse à la rupture d'une molécule diatomique sous l'effet d'un champ
+  électrique. On modélise la molécule par un couple de masses m reliées par un
+  ressort de constante de raideur k et on note
+  $\omega_0=\sqrt{\frac{k}{m}}$
+  On considère que l'atome 1 reste immobile et que seul l'atome 2 se déplace. On
+  note $\vec{r}=M_1M_2$ . On considère que la molécule est rompue si $r > R$ . Pour
+  modéliser la polarisation de la liaison, on supposera que l'atome 2 porte une
+  charge électrique $q$ . On se placera dans la suite du problème en régime
+  forcé stationnaire établi.
+  \Question La molécule est soumise à champ électrique
+  $\vec{E}=E_0\cos{\omega_0t}\vec{e_x}$
+  \subQuestion Montrez en quoi une solution de la forme particulière de la forme
+  $\vec{r}=\vec{r_0}\cos({\omega_0t+\phi})$ ne peux pas convenir
+  \subQuestion On cherche la solution sous la forme
+  $\vec{r}=(A\cos(\omega_0t)+B\sin(\omega_0t))t \vec{e_x}$ Déterminer $A$ et $B$
+  \subQuestion Quelle valeur minimale doit avoir le champ $\vec{E}$ pour rompre
+  la molécule ?
+  \Question On modifie à présent le modèle de la molécule pour faire apparraitre
+  un facteur de qualité Q.
+  \subQuestion Déterminez l'espression de $\vec{r}$
+  \subQuestion Quelle valeur minimale doit avoir le champ $\vec{E}$ pour rompre
+  la molécule?
+\end{Exercise}
+\begin{Answer}
+  En régime stationnaire, on suppose que la composante issue de l'équation
+  homogène a disparu et on ne considère plus que la contribution de la solution
+  particulière. Par conséquent, on ne tiendra aucun compte des conditions
+  initiales, disparues avec le régime transitoire
+  \Question Cas parfait : (par analyse synthèse)
+  \subQuestion le PFD donne:
+  $\ddd{\vec{r}}{t} +\omega_0^2 \vec{r} = \frac{qE_0}{m}\cos(\omega_0t)\vec{e_x}$
+  On injecte la solution proposée , elle n'est valable que pour $E_0=0$
+  \subQuestion on a cette fois:
+  \[
+ \dd{\vec{r_p}}{t}=(A\cos(\omega_0t)+B\sin(\omega_0t)-A\omega_0t\sin(\omega_0t)+B\omega_0t\cos(\omega_0t))\vec{e_x}
+  \]
+  \[\ddd{\vec{r_p}}{t} =(-2A \omega_0\sin(\omega_0t)+2B \omega\cos(\omega_0t)-A \omega_0^2t\cos(\omega_0t)-B \omega_0^2t\sin(\omega_0t))\vec{e_x}
+  \]
+  Soit
+  \begin{align*}
+    (-2A \omega_0\sin(\omega_0t)+2B \omega\cos(\omega_0t)-A \omega_0^2t\cos(\omega_0t)-B \omega_0^2t\sin(\omega_0t)) \\
+    &+ \omega_0^2(At\cos(\omega_0t)+Bt\sin(\omega_0t))\\
+    & =\frac{qE_0}{m}\cos(\omega_0t)
+  \end{align*}
+  Ce qui implique:
+  \[
+  \begin{cases}
+    2B \omega_0\cos(\omega_0t) =\frac{qE_0}{m}\cos(\omega_0t)\\
+    -2A \omega_0\sin(\omega_0t)=0
+  \end{cases} \implies
+  \begin{cases}
+    B=\frac{qE_0}{2m \omega_0}\\
+    A=0
+  \end{cases}
+  \]
+  \subQuestion la solution n'est pas bornéee si $E_0\neq 0$
+  \Question
+  \subQuestion $\ddd{\vec{r}}{t} + \frac{w_0}{Q}\dd{\vec{r}}{t}+ \omega_0^2 \vec{r} =
+  \frac{qE_0}{m}\cos(\omega_0t)\vec{e_x}$\\
+  Passage en complexe
+  \[ i\frac{\omega_0^2}{Q}\vec{r_0}e^{i\phi}= \\frac{q}{m}E_0 \vec{e_x} \]
+  \[
+    \begin{cases}
+      \vec{r_0}= \frac{q}{m \omega_0}E_0 \vec{e_x}\\
+      \phi = \frac{-\pi}{2}
+    \end{cases}
+  \]
+  \subQuestion Le mouvement est d'amplitude constante pour rompre la lisaion on
+  doit donc avoir:
+  \begin{align*}
+    r_0 &\ge R\\
+    E_0&\ge \frac{m \omega_0^2R}{Qq}
+  \end{align*}
+\end{Answer}

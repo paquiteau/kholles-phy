@@ -1,0 +1,8 @@
+{
+"template": "seance.tmpl",
+"title": "Colles de Physique",
+"subtitle": "Exercices et Solutions",
+"bookoptions": [""],
+"exerciseoptions": [""],
+"chapters" : ["Moment_cinetique"]
+}

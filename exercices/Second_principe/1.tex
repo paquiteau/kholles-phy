@@ -1,0 +1,22 @@
+\begin{Exercise}[title=]
+	On considère un récipient contenant un fluide fermé par un piston mobile.
+	À l'instant initial tout le fluide est liquide et le piston est en contact avec le fluide. On soulève alors le piston d'une hauteur $x$. et la hauteur de liquide diminue d'une hauteur $d$ par rapport à la position initiale du piston.
+	\Question Sur un diagramme P-V tracer l'évolution du système.
+	\Question On connais la masse volumique du liquide. déterminer la masse volumique du gaz présent. puis la pression de vapeur saturante du fluide à la température finale.
+	\Question On mesure la température à l'état initial et à l'état final. Exprimer $x$ en fonction de grandeurs caractéristique du fluide. (\emph{Indication: On pourra effectuer un bilan entropique}).
+\end{Exercise}
+\begin{Answer}
+	\Question /!\ Changement d'état, Deux isothermes , la limite L/G en cloche.
+	\Question CdM :$\rho_l d S = \rho_g (x+d)S$ donc $ \rho_g = \frac{P_{sat}(T_2)M}{RT_2} = \rho_l\frac{d}{d+x}$ donc $P_{sat}(T_2) = \rho_l\frac{RT_2}{M}\frac{d}{d+x}$.
+	\Question $dS =  \cancel{\delta Q} + \cancel{\delta W} = 0$  (adiabatique réversible)
+	On considère $I\underset{iso-V}{\to} J \underset{iso-P,iso-T }{\to} F$
+	alors
+	$dS_{IJ} = \delta Q_{rev} = mc\frac{dT}{T} \implies \Delta S_{IJ} = mc\ln(T_2/T_1)$
+	de même $\Delta S_{JF} = \frac{m x_g L_{vap}}{T_2}$
+	on a donc
+	\[
+		mc\ln(T_1/T_2) = \frac{m x_g L_{vap}}{T_2} \implies x_g = \frac{cT_2}{L_{vap}}\ln(T_2/T_1)
+	\]
+	Avec l'équation des Gaz parfaits  :
+	\[x = \frac{m}{M}\frac{cT_2^2}{L_{vap}}\frac{R}{P_{sat}}\left(1-\frac{\rho_g}{\rho_l}\right)\ln(T_2/T_1)\]
+\end{Answer}

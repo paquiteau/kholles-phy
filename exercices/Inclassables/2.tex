@@ -1,0 +1,13 @@
+\begin{Exercise}[title=]
+  	On considère une chaîne de longueur $L$ et de masse linéique $\lambda$ uniforme sur une table. Initialement un quart de sa longueur pend à l'extrémité de la table. Sans frottement pour la retenir, elle  se met à glisser.
+	\Question  Déterminer la trajectoire de l'extrémité pendante de la chaîne.
+	\Question En considérant les frottements, quelle longueur maximale peut on faire pendre?
+\end{Exercise}
+\begin{Answer}
+  	\Question $E_p(z) = -\int_{0}^{z}\lambda z g dz = -\frac{-\lambda g z^2}{2} + E_p(0)$
+	Alors en dérivant le TEM :
+	\[ \ddot{z} - \omega z = 0 \text{ avec } \omega = \sqrt{\frac{g}{L}} \implies z =\frac{L}{4}\cosh(\omega t) \]
+
+	\Question Modèle de coulomb : $\mu = \frac{\|T\|}{\|N\|} = \frac{x}{L-x} \implies x= \frac{\mu}{1+\mu}\lambda $
+	\Question Bonus : Refaire les calculs avec ce modèle. (équation non homogène)
+\end{Answer}

@@ -1,0 +1,35 @@
+\begin{Exercise}[title=Dimérisation du butadiène]
+	On étudie à \SI{330}{\celsius} la dimérisation supposé totale du butadiène (B) en vinylcyclohexène (V) en milieu gazeux .
+	La réaction à lieu à volume constant, on mesure la pression  totale au cours du temps, le butadiène étant le seul présent à l'état initial.
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|c|c|}
+			\hline
+			t(min) & 0 & 10    & 20    & 30    & 40    & 50    & 60    \\
+			\hline
+			P(bar) & 1 & 0.887 & 0.816 & 0.767 & 0.731 & 0.703 & 0.682 \\
+			\hline
+		\end{tabular}
+	\end{center}
+	\Question Montrer que la réaction est d'ordre 2
+	\Question Calculer la constante de vitesse k à \SI{330}{\celsius}
+	\Question En déduire le temps de demi-réaction. Retrouver sa valeur avec le tableau
+\end{Exercise}
+\begin{Answer}
+	\Question
+	On fait l'hypothèse d'une réaction d'ordre 2 : $ v= \frac{-1}{2}\dd{[B]}{t}=k.[B]^2$ on intègre entre 0 et  t: \[ \frac{1}{B}-\frac{1}{B_0}=2kt ~~(1) \]
+	\begin{tabular}{lllc}
+		    & \multicolumn{2}{l}{$2B = V$} & $n_{gaz}$                 \\
+		t=0 & $(n_B)_0$                    & 0         & $n_T=(n_B)_0$ \\
+		t   & $(n_B)_0-2x$                 & x         & $(n_B)_0-x$   \\
+	\end{tabular}
+	D'après le tableau d'avancement : $n_B=n_{B_0}-2x$ et $x= \frac{n_{B_0}-n_B}{2}$ d'où $n_T=\frac{n_{B_0}+n_B}{2}$. \\
+	Avec la loi des gaz parfaits : $P=n_T \frac{RT}{V}=([B]_0+[B])\frac{RT}{2}$\\
+	$[B]_0= \frac{1}{RT}(2P-P_0) $; avec (1) on a $\frac{RT}{2P-P_0}-\frac{RT}{P_0}=2kt$ soit:
+	\[ \frac{1}{2P-P_0}=\frac{2kt}{RT}+\frac{1}{P_0}\]
+	si la réaction est d'ordre deux , on doit avoir une fonction affine , ok :
+	a= \SI{2.92e-7}{\per\Pa\per\min}; r= 0.99999
+	\Question $k= a \frac{RT}{2} = $ \SI{7.32e-1}{\L\per\mol\per\minute}
+	\Question La réaction est totale à $t_{1/2}$  on a $P=3P_0/4$
+	\[2kt_{1/2}=\frac{RT}{2\frac{3P_0}{4}-P_0}-\frac{RT}{P_0} ~~ t_{1/2}= \frac{RT}{2kP_0}=34 \text{ min }\]
+	On retrouve ces valeurs avec le tableau.
+\end{Answer}

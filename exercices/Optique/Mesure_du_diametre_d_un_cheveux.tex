@@ -1,0 +1,16 @@
+\begin{Exercise}[title=Mesure du diamètre d'un cheveux]
+Vous disposez d'un laser de longueur d'onde $\lambda=\SI{633}{\nano\meter}$ , d'un écran ,d'une règle de \SI{20}{\centi\meter} et d'un mètre ruban de \SI{2}{\meter}, comment faites vous pour mesurer le diamètre d'un cheveu?  quelle précision pouvez vous atteindre sachant que la règle et le mètre sont graduées en millimètre?
+\end{Exercise}
+\begin{Answer}
+On utilise le phénomène de diffraction:
+%\begin{figure}[h]
+	\begin{center}
+	\input{./fig/Diffract.tex}
+	\end{center}
+%\end{figure}
+on a $\sin(\theta)=\frac{\lambda}{D} \simeq 10^{-3} $et $\tan(\theta)=\frac{L}{2D}$ on en déduit : $d \simeq \frac{2\lambda D}{L}$
+Incertitude de $\Delta L \simeq 0.3$mm ( modulo les conditions d'obscurités) avec $\theta \sim 10^{-3}$ et $D \sim 1,5m$ donc $L \sim 2cm$
+donc l'incertitude relative sur L est $\frac{\Delta L }{L} \simeq 1,5\%$ et $\frac{\Delta D}{D} \simeq 1\%$
+alors on a $\frac{\Delta d}{d} = \frac{\Delta L}{L} +\frac{\Delta D}{D} \simeq 3\%$\\
+$\Rightarrow$ Augmentation de la précision en $\sqrt{n}$ du nombre d'expérience.
+\end{Answer}

@@ -1,0 +1,22 @@
+\begin{Exercise}[title=]
+		Montrer que le mouvement d'une particule chargé soumise à un champ $\vec{B}$ constant, uniforme et orthogonal à la vitesse de la particule est circulaire.
+\end{Exercise}
+\begin{Answer}
+      On a $m\vec{a} = q\vec{v}\wedge \vec{B}$
+      soit :\\
+      $\begin{cases}
+        m \ddot{x}= qB \dot{y} \\
+        m \ddot{y}= -qB \dot{x}
+      \end{cases}$
+      Alors on pose $\omega = \frac{qB}{m}$ et $u=x+ iy$ donc $\ddot{u} = -i\omega\dot{u}$
+      donc \[u= \frac{iA}{\omega}\exp(-i\omega t) =-\frac{A}{\omega}\sin(\omega t) +i \frac{A}{\omega}\cos(\omega t)\]
+      on identifie les parties réelles et imaginaires et on obtient
+      \[\begin{cases}
+	      x = -\frac{A}{\omega}\sin(\omega t) \\
+	      y =  \frac{A}{\omega}\cos(\omega t)
+	      x^2 + y^2 = \left(\frac{A}{\omega}\right)^2
+
+        \end{cases}
+      \]
+      On a bien un mouvement circulaire. $A = v_{0x}$
+\end{Answer}

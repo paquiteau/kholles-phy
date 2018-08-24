@@ -1,0 +1,22 @@
+\begin{Exercise}[title=Adaptation d'impédance]
+	On utilise un générateur de tension réel, de force électromotrice $E(t) = E_0 \sin\omega t$  et de résistance interne $R_0$.On branche à ses bornes un dipôle d'impédance	$Z = R + iL\omega$; on notera $U(t)$ la tension à ses bornes.Dans l'ensemble de l'exercice, on se placera dans le cadre de l'ARQS.
+	\Question Exprimer la forme générale de l'intensité	I(t) qui parcourt le circuit, puis exprimez l'amplitude, la valeur effcace et le déphasage de l'intensité.
+	\Question Exprimez la puissance $\mathcal{P}$ moyenne reçue par l'impédance	Z .
+	\Question On suppose dans cette question que le dipôle est une résistance pure. Montrez que, pour une certaine valeur $R_m$ de la résistance, la puissance reçue par l'impédance présente un maximum.
+	Application numérique $E_{eff}=$ 220 V , $R_0$ = \SI{10}{\ohm},$\frac{\omega}{2\pi}	=$ 50 Hz
+	\Question On suppose à présent que l'inductance a une valeur fixée
+	L = 0.1H .	Montrez que la puissance dissipée par l'impédance totale est toujours inférieure à celle dissipée en l'absence d'inductance. Déterminez la nouvelle résistance $R_m'$ qui maximise la puissance dissipée.
+\end{Exercise}
+\begin{Answer}
+	\Question $I(t)=I_0\sin(\omega t+\varphi)$  (loi des mailles)
+	$\underline{E}(t)=\underline{I}(t)Z +\underline{I}(t)R \Leftrightarrow E_0 \ell{i(\omega t +\pi/2)} = I_0 \e^{i(\omega t +\pi/2+\varphi_I)}(R_0+R+iL\omega)$\\
+	donc $I_0\ell{i\phi_I}=\frac{E_0}{R+R_0+iL\omega}$\\
+	d'où : $I_0 = \frac{E_0}{\sqrt{(R+R_0)^2+L^2\omega^2}}$
+	\Question Par définition :
+	$\mathcal{P} = <I(t)U(t)>= \frac{I_0U_0}{2}cos(\varphi_U -\varphi_I)$\\
+	d'où $U_0=I_0\sqrt{R^2+L^2 \omega^2}$ \\
+	on trouve : $\cos(\varphi_U-\varphi_I) = \frac{R}{\sqrt{R^2+L^2\omega^2}} et \sin(\varphi_U-\varphi_I)= \frac{L\omega}{\sqrt{R^2+L^2\omega^2}}$.
+	 donc : $\mathcal{P}=RI_0^2 /2 = \frac{RE_{eff}^2}{(R+R_0)^2+L^2\omega^2}$
+	\Question Pour L=0, il faut $R=R_0$ et alors $\mathcal{P}=1,2$ MW.
+	\Question il faut $R= \sqrt{L^2\omega^2+R_0^2} $ = \SI{33}{\ohm}
+\end{Answer}

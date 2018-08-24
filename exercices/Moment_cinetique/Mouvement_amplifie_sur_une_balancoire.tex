@@ -1,0 +1,23 @@
+\begin{Exercise}[title=(*) Mouvement amplifié sur une balançoire]
+	un enfant debout sur une balançoire est schématisé par un pendule oscillant sans frottement autour d'un axe de rotation horizontal. Quand la balançoire passe par un maximum d'élongation, l'enfant fléchit brusquement ses genoux ( la distance de son centre de masse à l'axe est alors $a_1$ et son moment d'inertie par àl'axe $J_1$, position 1). Quand la balançoire passe par le point le plus bas, l'enfant se redresse brusquement parallèlement à la corde tendue (la distance de son centre de masse à l'axe est alors $a_2$ et son moment d'inertie par àl'axe $J_2$, position 2)
+	\Question Faire un dessin; comparer $a_1$ et $a_2$ d'une part et $J_1$ et $J_2$ d'autre part et en déduire la valeur du coefficient $K= J_2A_2 /J_1a_1$ par rapport à 1.
+	Au passage par le point le plus bas ($\theta=0$) le moment des forces extérieur par rapport à l'axe ( réaction d'axe et surtout poid de l'enfant) est nul. Le moment cinétique pendant ce court intervalle de temps est conservé.
+	\Question Quelle relation cela entraine t-il ?  Comparer au passage des positions 1 et 2 les vitesses angulaires $\omega_1$ et $\omega_2$ ainsi que les énergies cinétiques $E_c1$ et $E_c2$ d'où vient l'énergie ?
+	\Question Initialement la balançoire est écarté de la direction verticale d'un angle $\theta_0$ et la vitesse angulaire est nulle. Au bout de combien de passage par la verticale peut elle espérer atteindre la direction horizontale ? se servir de $K$.
+\end{Exercise}
+\begin{Answer}
+
+	SCHEMA
+
+	\Question On a $a_1 > a_2$ et $J_1 >J_2 $ donc $K< 1$
+	On passe deux fois debout au milieux pour une oscillation !
+	\Question La conservation du moment cinétique aub passage par le point le plus bas s'écrit : $J_1 \omega_1 = J_2 \omega_2$ soit $\omega_2 > omega_1$ et donc $Ec_2 > Ec_1 $ car le système est déformable (l'enfant fourni de l'énergie).
+	\Question TEC $\theta_0 \to \theta =0 $ : $\frac{1}{2}J_1 (\omega_1^2-0) = mg (1-\cos\theta_0) a_1$
+
+	TEC $\theta=0 \to \theta_1$ $\frac{1}{2}J_1 (0-\omega_2^2) = mg (1-\cos\theta_1) a_2$
+
+	et avec $J_1\omega_1 = J_2\omega_2$, il vient au bout d'une demi-oscillation:
+	\[ (1-\cos\theta_0) = K (1-\cos\theta_1) \]
+	Partant de la même énergie au début de la deuxième demi-oscillation, on a de même $ (1-\cos\theta_1) = K (1-\cos\theta_2)$ et par récurrence de passage par la position d'équilibre:
+	\[ (1-\cos\theta_0) = K (1-\cos\theta_1)= K^2 (1-\cos\theta_2)=K^n(1-\cos\theta_n) \]
+\end{Answer}

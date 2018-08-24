@@ -1,0 +1,15 @@
+\begin{Exercise}[title=Oscillateur Parfait]
+	Déterminer i(t):
+	\Question A partir des lois de comportements des dipôles
+	\Question Avec un raisonnement énergétique.
+	\emph{A l'instant initial le condensateur est complétement chargé avec la charge $Q$}
+	\begin{center}
+		\begin{circuitikz}
+			\draw(0,0) to[L] (0,2) -- (1,2) to[C,i=$i$](1,0) -- (0,0);
+		\end{circuitikz}
+	\end{center}
+\end{Exercise}
+\begin{Answer}
+\Question	on a $u= -L\dd{i}{t}$ et $i =  C\dd{u}{t} $ donc $i = -LC \ddd{i}{t}$
+\Question $E = E_C + E_L = \frac{1}{2}Li^2 + \frac{1}{2}\frac{q^2}{C}$ on dérive et tout va bien.
+\end{Answer}

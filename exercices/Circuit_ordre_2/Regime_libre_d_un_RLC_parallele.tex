@@ -1,0 +1,21 @@
+\begin{Exercise}[title=Régime libre d'un RLC parallèle]
+	Pour $t<0$ l'interrupteur est en position 2 , on le bascule en position 1à $t=0$.
+	\Question Déterminer l'équation différentielle vérifiée par $i$.
+	\Question On donne : L= \SI{50}{mH}, C=\SI{1}{\micro F} R=\SI{1}{k\ohm} et E=\SI{5}{V} , donner l'expression numérique de i.
+	\begin{center}
+		\begin{circuitikz}
+			\draw (1,2) node[spdt, xscale=-1,yscale= -1](K){};
+			\draw (0,-1) to[V,v=$E$] (0,1) |- (K.out 1)node{2};
+			\draw (0,-1) --(-1,-1) |- (K.out 2)node{1};
+			\draw (K.in) to[R] (3,2) ;
+			\draw (3,2) to[C,l_=$C$](3,-1);
+			\draw (0,-1) -- (5,-1);
+			\draw (3,2) -- (4,2) to[L,l=$L$] (4,-1) ;
+			\draw (4,2) -- (5,2) to[R,l=$R$] (5,-1);
+		\end{circuitikz}
+	\end{center}
+\end{Exercise}
+\begin{Answer}
+	\Question  $i + \frac{2L}{R}\dot{i} +LC \ddot{i} = 0 $
+	\Question Conditions initiales : $i(0)= E/R~~ et~~\dot{i}(0) = 0 $
+\end{Answer}

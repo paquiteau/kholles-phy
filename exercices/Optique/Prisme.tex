@@ -1,0 +1,22 @@
+\begin{Exercise}[title=Prisme]
+Soit un prisme rectangle isocèle dont on a argenté l’hypothénuse. Des rayons
+arrivent perpendiculairement à cette face.
+Montrer que la distance $D$ est indépendante du rayon incident considéré.
+%\begin{figure}[h]
+	\begin{center}
+		\input{./fig/prisme.tex}
+	\end{center}
+%\end{figure}
+
+\end{Exercise}
+\begin{Answer}
+L’hypothénuse étant argentée se comporte comme un miroir plan ; le système est
+donc équivalent à une lame à faces parallèles en remplaçant le triangle
+rectangle isocèle par un carré. La loi de Descartes s'écrit $n\sin r =\sin i$
+avec $i = 45^0$. la distance $b$ parcourue dans le prisme vérifie $\cos r= a/b$
+en notant $a$ le coté du carré. Le calcule de $x+y$ s'obtient à partir de
+l'angle $\alpha$ entre la direction incidente et le parcours de la lumière dans le
+prisme. On a $i+\frac{\pi}{2}+r+\alpha=\pi$ donc $\alpha=\frac{\pi}{2}-i-r$ et
+$\sin\alpha = \frac{x+y}{b}$ d'où
+\[x+y= \frac{a}{\cos r}\sin(\frac{\pi}{2}-r)=\frac{a}{\sqrt{2}(1-tan(r))}\]
+\end{Answer}

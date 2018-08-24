@@ -1,0 +1,24 @@
+\begin{Exercise}[title=Formation de la neige artificielle]
+		La neige artificielle est obtenue en pulvérisant de fines goutte d'eau liquide à \gdr{T_1}{10}{\degreeCelsius}.
+		dans l'ai ambiant à \gdr{T_a}{-15}{\degreeCelsius}.
+		\Question Dans un premier temps la goutte d'eau supposée sphérique (rayon $R=0,2mm$) se refroidti en restant liquide.Elle recoit de l'air extérieur un transfert thermique $h(T_a-T(t)$) par unité de temps et de surface, où $T(t)$ est la température de la goutte.
+		\subQuestion Établir l'équation différentielle vérifiée par $T(t)$.
+		\subQuestion En déduire le temps nécessaire pour que \gdr{T(t)}{-5}{\degreeCelsius}. Application numérique pour \gdr{h}{65}{W\per\m^2\per\K}.
+		\Question
+		\subQuestion Lorsque la goutte atteint la température de \SI{-5}{\degreeCelsius}. la surfusion cesse. la goutte est partiellement solidifiée et la température devient égale à \SI{0}{\degreeCelsius}. Calculer la fraction $x$ de liquide restant à solidifiée en supposant la transformation trés rapide et adiabatique. On négligera aussi la variation de volume. l'enthalpie de fusion de la glace est \gdr{L_f}{335e3}{\J\per\kg}.
+		\subQuestion Au bout de combien de temps la goutte est-elle complètement solidifiée?
+\end{Exercise}
+\begin{Answer}
+		\Question
+		\subQuestion $\d U \simeq \d H = \delta Q \implies \dd{T}{t} + \frac{3h}{\rho Rc}T = \frac{3h}{\rho R c} T_a$
+		\subQuestion la solution de l'EDL est  : $T(t)=T_a+(T_1-T_a)\exp\left(\frac{-t}{\tau}\right)$ et on a donc \gdr{t}{3,9}{s}.
+		\Question $m$ liquide à $T_i$ $\to$ $m$ liquide à $T_f=0$\\
+		 puis:\\
+		$m$ liquide à $T_f$ $\to$ $mx$ liquide + $m(1-x)$ glace à \gdr{T_f}{0}{\degreeCelsius}.
+		On rappelle que la variation d'une fonction d'état est indépendante du chemin  suivi . On applique le premier principe sur les deux transformations:
+		\[\Delta H = Q= 0 \implies m_c(T_f-T_i)-m(1-x)L_f=0 \implies x= 0,94 \]
+		On applique le premier principe à la goutte, sachant qu'elle reste à \gdr{T}{0}{\degreeCelsius} pendant la solidification. On appelle $dm$ la masse d'eau solidifiée pendant $dt$ et $dH$ la variation d'enthalpie du système:
+		\[dH = 4\pi R^2h (T_a-T)dt \text{ et } dH = -dmL_f \implies dm=\frac{4\pi R^2h(T-Ta)}{L_f}dt\]
+		Soit en intégrant :
+		$m(t) = \frac{4\pi R^2h(T-Ta)}{L_f}t+ m_0$ La masse de liquide qui reste à solidifier est : $m(t)-m_0 =\frac{4}{3}\pi R^3 \rho x $ soit $t= \frac{xRL_f\rho}{3h(T-T_a)} = 21,5s$.
+\end{Answer}

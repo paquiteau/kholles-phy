@@ -1,0 +1,7 @@
+{
+"template": "default.tmpl",
+"title": "Colles de Physique",
+"subtitle": "Exercices et Solutions",
+"bookoptions": ["showchapter","openany","continue"],
+"exercises": "all"
+}

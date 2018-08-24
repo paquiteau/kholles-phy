@@ -1,0 +1,27 @@
+\begin{Exercise}[title=Décomposition de $N_2O_5$]
+	L'expérience montre que la réaction suivante en phase gazeuse : $N_2O_5 \to 2 NO_2 + 0.5 O_2$ réalisé aux environs de \SI{160}{\celsius} se comporte comme une réaction totale du premier ordre par rapport au pentaoxyde de diazote $N_2O_5$. Soit $k_1$ la constante de vitesse pour une température donnée. On négligera dans le domaine de température envisagé la dissociation et la dimérisation du dioxyde d'azote.
+	\Question Établir la relation donnant $[N_2O_5]$ en fonction du temps et de la concentration initiale $[N_2O_5]_0$.
+	\Question Cette expérience est réalisée à \SI{160}{\celsius} dans un récipient de volume constant; au bout de trois seconde 2/3 de $N_2O_5$ ont été décomposé. Déterminer $k_1$ à cette température.
+	\Question Calculer le temps de demi réaction à cette température. Que serait-il si la concentration initiale est doublée?
+	\Question La constante $jk_1$ suit la loi d'Arrhénius d'énergie d'activation $E_a$=\SI{103}{kJ\per\mol}.
+	\subQuestion Calculer $k_1'$ constante de vitesse à la température $\theta$ à laquelle il faut effectuer la réaction précédente pour que $95,00\%$ du pentaoxyde d'azote soit décomposé en trois seconde.
+	\subQuestion Déterminer $\theta$ et calculer le nouveau temps de réaction
+\end{Exercise}
+\begin{Answer}
+	\Question $v=-\dd{[N_2O_5}{t} = k_1.[N_2O_5]$ d'où $[N_2O_5]=[N_2O_5]_0 \exp(-k_1t) $
+	\Question ~ \\
+	\begin{tabular}{cccc}
+		     & \multicolumn{3}{l}{$N_2O_5 = 2NO_2 + 0.5 O_2$}              \\
+		t=0  & n                                              & 0    & 0   \\
+		t=3s & n/3                                            & 4n/3 & n/3 \\
+	\end{tabular}\\
+	Pour $t=t_1=3s$,$[N_2O_5]_{t_1}=[N_2O_5]_0 /3 = [N_2O_5]_0 \exp(-k_1t)$ d'ou $k_1=\ln(3)/t_1=$\SI{0.370}{\per\s}.
+	\Question
+	$t_{1/2} = ln(2)/k_1 =$ \SI{1.89}{s}
+	identique quelquesoit la quantité initiale
+	\Question
+	Pour $T= \theta$ ;$[N_2O_5]_{t_1}=[N_2O_5]_0 *0.05$ D'où $ k_1'= -ln(0.05)/t_1$.
+	Or $k_1$ suit la loi d'Arréhnius : $k_1(T) = A \exp(\frac{-E_a}{RT})$ donc $k_1'(\theta) =k_1(T)\exp\left(\frac{-E_a}{RT}\left(\frac{1}{\theta}-\frac{1}{T}\right)\right)$
+	D'où $\theta = \left(\frac{1}{T} -\frac{R}{E_a}\ln\frac{k_1'}{k_1}\right)^{-1}$\SI{449}{K}=\SI{176}{\celsius}\\
+	$t_{1/2}$ = 0.69s
+\end{Answer}

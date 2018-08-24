@@ -1,0 +1,49 @@
+\begin{Exercise}[title=Théorème de Kemrely]
+  \begin{center}
+    \begin{circuitikz}
+      \draw (0:0) to[R,l=$R_1$,i^<=$ $] (90:2)node[above]{$i_1$};
+      \draw (0:0) to[R,l=$R_2$,i^<=$ $] (-30:2)node[right]{$i_2$};
+      \draw (0:0) to[R,l=$R_3$,i^<=$ $] (210:2)node[left]{$i_3$};
+      \draw (-30:2.5) to[open,v^=$u_1$] (210:2.5); \draw (210:2.5)
+      to[open,v^=$u_2$] (90:2.5); \draw (90:2.5) to[open,v^=$u_3$]
+      (-30:2.5);
+    \end{circuitikz}
+    \begin{circuitikz}
+      \draw (90:2.5)to[short,i=$i_1$] (90:2); \draw
+      (-30:2.5)to[short,i=$i_2$] (-30:2); \draw
+      (210:2.5)to[short,i=$i_3$] (210:2); \draw (-30:2)
+      to[R,l_=$r_{23}$,v^=$u_1$] (210:2); \draw (210:2)
+      to[R,l_=$r_{13}$,v^=$u_2$] (90:2); \draw (90:2)
+      to[R,l_=$r_{12}$,v^=$u_3$] (-30:2);
+    \end{circuitikz}
+  \end{center}
+  \Question Étude du montage en étoile \subQuestion Exprimez la loi
+  des noeuds pour obtenir une relation entre $i_1$ , $i_2$ et $i_3$ .
+  \subQuestion En déduire une expression de $u_1$ et $u_2$ en fonction
+  de $i_1$ et $i_2$ .  \Question Étude du montage en triangle
+  \subQuestion Exprimez la loi des mailles pour obtenir une relation
+  entre $u_1$ , $u_2$ et $u_3$ .  \subQuestion En déduire une
+  expression de $i_1$ et $i_2$ en fonction de $u_1$ et $u_2$ .
+  \Question Équivalence entre les deux montages\\
+  On suppose que $r_{12}$ , $r_{23}$ et $r_{13}$ sont tels que les
+  deux montages soient équivalents. En déduire quatre relations
+  vérifiées par $r_{12}$ , $r_{23}$ et $r_{13}$ . En déduire les
+  expressions de $r_{1}$ , $r_{2}$ et $r_{3}$ en fonction de ces
+  résistances.
+\end{Exercise}
+\begin{Answer}
+  \Question Etoile:$ i_{1} + i_{2} + i_{3} = 0 $et
+  $u_{1} = -r_{2} i_{2} + r_{3} i_{3} = -r_{3} i_{1} - (r_{2} + r_{3}
+  )i_{2}$
+  et$ u_{2} = r_{1} i_{1} - r_{3} i_{3} = i_{1} (r_{1} + r_{3} ) +
+  i_{2} r_{3}$.  \Question Triangle :$ u_{1} +u_{2} +u_{3} = 0$
+  et$ i_{1} =\frac{u_2}{r_{13}}-\frac{u_3}{r_{12}} =
+  \frac{u_1}{r_{12}}+\left(\frac{1}{r_12}+\frac{1}{r_{13}}\right)u_2$
+  et
+  $ i_{2} =\frac{u_3}{r_{12}}-\frac{u_1}{r_{23}} =
+  -\frac{u_1}{r_{12}}-\left(\frac{1}{r_12}+\frac{1}{r_{13}}\right)u_1$
+  \Question Équivalent: à $i_3$ et $u_3$ fixés, mêmes intensité et
+  tension dans les deux circuits, on remplace les intensités obtenus
+  dans triangle dans les tension de étoile, il vient :
+  $r_1=\frac{r_{12}r_{13}}{r_12+r_13+r_23}$ etc .
+\end{Answer}

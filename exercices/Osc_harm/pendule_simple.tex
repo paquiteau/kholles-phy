@@ -1,0 +1,33 @@
+\begin{Exercise}[title=pendule simple]
+On considère une masse ponctuelle $m$ fixée au bout d’une tige rigide, de longueur $l$, pouvant
+tourner librement dans un plan vertical autour de l’autre extrémité O.
+\Question Définir une coordonnée représentant de manière commode la position de la masse $m$.
+\Question Écrire son énergie cinétique $E_c$ et son énergie potentielle $E_p$
+en fonction de cette coordonnée et en donner une représentation
+graphique.
+\Question Discuter qualitativement le mouvement de la masse $m$, selon la valeur de son énergie mécanique totale.
+\Question On suppose que la masse $m$ reste au voisinage de sa position d’équilibre. Écrire une expression du développement limité de $E_p$ autour de cette position d’équilibre. En déduire
+l’équation du mouvement. À quel autre système connu est-on ramené ?
+
+\emph{On donne les développement limité de cos pour de petite valeurs de x: $cos(x) \simeq 1 -\frac{x^2}{2}$}
+\end{Exercise}
+\begin{Answer}
+\Question La tige étant rigide et de longueur l constante, le mouvement de la masse m sera
+circulaire de centre O. La description en coordonnées polaire est donc la plus adaptée.
+La coordonnée $\theta$ permet alors de définir complètement le mouvement.
+\Question  Les forces s’appliquant à la masse sont son poids (vertical)
+et la réaction de la tige (portée par la tige) qui
+ne travaille pas puisque perpendiculaire à la trajectoire.
+L’énergie mécanique est donc conservée et l’énergie potentielle
+ne dérive que du poids ($E_p = mg h $ où $h$ est
+l’élévation de la masse). En prenant comme origine d’énergie potentielle le point bas de la trajectoire on a :
+\[ E_p=mgl(1-\cos(\theta) \text{ et } E_c+E_p =E_m=C^{ste} \Rightarrow E_c= E_{m0}+mgl(\cos(\theta)-1)\]
+\Question
+Si $E_{m0} > 2mg l$, le pendule tourne.
+Si $E_{m0} = 2mg l$, le pendule arrive à $\theta = \pi$ avec une vitesse nulle.
+Si $E_{m0} < 2mg l$, le pendule oscille entre$ \pm \theta_{max}$ avec $mg l(1-\cos(\theta_{max}) = E_{m0}$.
+\Question Avec les DL il vient :
+\[ E_p = mgl\frac{\theta^2}{2} \text{  et  } E_c= ml^2 \frac{\dot{\theta}}{2}\]
+On dérive la conservation de l'énergie mécanique:
+\[ mgl\frac{\theta^2}{2} + ml^2 \frac{\dot{\theta}}{2} = C^{ste} \Rightarrow  mgl\theta \dot{\theta}+ml^2\theta \dot{\theta} =0 \Rightarrow \ddot{\theta} + \frac{g}{l} \theta = 0 \]
+\end{Answer}

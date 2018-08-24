@@ -1,0 +1,21 @@
+\begin{Exercise}[title=Vibration d'une molécule]
+La fréquence de vribation de la molécule de HCl est $f=$ \SI{8.5e13}{\Hz} . on donne les masse atomiques molaire $M_H=$\SI{1}{\g\per\mol} et $M_{Cl}$=\SI{35.5}{\g\per\mol} ainsi que le nombre d'avogadro : $\NA=$ \SI{6.02e23}{\per\mol}. \\
+On modélise la molécule par un atome d'hydrogène relié à un atome  de chlore fixe par un ressort de raideur k .
+	\Question Justifier l'hypothèse d'un atome de chlore fixe.
+	\Question Calculer k.
+	\Question On admets que l'énergie mécanique de la molécule est $E_m= \frac{1}{2}h f $ où $h=$\SI{6.63e-34}{\joule\second} est la constante de Planck. Calculer l'amplitude du mouvement de l'atome d'hydrogène.
+	\Question Calculer sa vitesse maximale.
+\end{Exercise}
+\begin{Answer}
+	\Question inertie du chlore.
+	\Question Sous l'hypothèse d'un mouvement suivant un axe fixe $(Ox)$:
+	\[E_p = \frac{1}{2}kx^2  ~~\& ~~ E_c = \frac{1}{2}m\left(\dd{x}{t}\right)^2 \]
+	Conservation de l'énergie mécanique donc :
+	\[ \dd{E_m}{t} = 0 = kx\dd{x}{t} + m\dd{x}{t} \ddd{x}{t} \Rightarrow  kx + m\ddd{x}{t} = 0 \]
+	On retrouve l'équation d'un OH .  et  $\omega = \sqrt{\frac{k}{m}} = \frac{2\pi}{f}$ ,donc :
+	\[ k= 4\pi^2 f^2 \frac{M_H}{\NA} = 4,7. 10^2N/m \]
+	\Question $x=A$ si $E_c = 0 $ ( position extrême). On a donc :
+	$ E_p=E_m \Rightarrow kA^2= hf$
+	\[A=\sqrt{\frac{h\NA}{4\pi^2fM_H}}=1,1.10^{-11}m\]
+	\Question $\dot{x}=-\omega A \sin(\omega t + \phi)$ donc $v_{max}= 2\pi f A = 5,8.10^3$m/s
+  \end{Answer}

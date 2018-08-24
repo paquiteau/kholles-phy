@@ -1,0 +1,12 @@
+\begin{Exercise}[title=]
+Étudier le filtre suivant:
+\begin{center}
+	\begin{circuitikz}
+		\draw (0,0) to[open,v=$V_e$] (0,4) to[R] (2,4) to[L] (2,2)to[C] (2,0) --(0,0);
+		\draw (2.5,0) to[open,v=$V_s$] (2.5,4);
+	\end{circuitikz}
+\end{center}
+\end{Exercise}
+\begin{Answer}
+	Filtre coupe bande: $ \frac{(jLC\omega)^2}{1+jRC\omega + (jLC\omega)^2}$
+\end{Answer}
