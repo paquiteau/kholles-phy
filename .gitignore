@@ -1,6 +1,5 @@
 #core latex files
-
-.aux
+*.aux
 *.lof
 *.log
 *.lot
@@ -13,7 +12,6 @@
 *.cb2
 .*.lb
 
-
 *.fdb_latexmk
 *.synctex
 *.synctex(busy)
@@ -23,3 +21,12 @@
 
 .pdf
 .pyc
+
+# emacs ...
+./auto/*
+*.el
+
+
+# projet
+
+/*.tex
