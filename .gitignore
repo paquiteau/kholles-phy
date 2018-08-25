@@ -23,7 +23,7 @@
 .pyc
 
 # emacs ...
-./auto/*
+/auto/*
 *.el
 
 
