@@ -3,9 +3,20 @@
   $\theta_0$ sur un support circulaire de rayon $R$, se déplaçant horizontalement
   dans le champ de pesanteur uniforme, avec une accélération
   constante $\gamma_0$. On négligera les frottements dans un premier temps.
+  \begin{center}
+    \begin{tikzpicture}
+      \draw (2,0) arc (0:180:2);
+      \draw (-2.5,-.5) rectangle (2.5,0) node[pos=.5] {$vehicule$};
+      \draw [->,>=latex] (0,0) -- (0,2.5) node[above]{$\vec{u_z}$};
+      \draw (0,0) node[above left]{$O$} -- (20:2) node[above right] {$M$};
+      \draw[->,>=latex] (20:2) -- ++(20:1) node[above]{$\vec{u_r}$};
+      \draw[->,>=latex] (20:2) -- ++(-70:1) node[right=5pt]{$\vec{u_\theta}$};
+      \draw[->] (0,1) arc (90:20:1) node [midway, above]{$\theta_0$};
+    \end{tikzpicture}
+  \end{center}
   \Question Position(s) d'équilibre et stabilité de ce système ?
   \Question Pourquoi les pares brises de voitures ne sont ils pas des
-  plansinclinés (ils possèdent une légère courbure?) ?
+  plans inclinés (ils possèdent une légère courbure?) ?
   \Question Quelles phénomènes rajoutent les frottements au problème ?
 
 \end{Exercise}
