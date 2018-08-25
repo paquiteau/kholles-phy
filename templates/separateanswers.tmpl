@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Template parameters
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%:[
 %%:  {"name":"title", "description":"Title", "default":"Colle de physique", "mandatory":true},
 %%:  {"name":"subtitle", "description":"Subtitle"},
@@ -30,8 +30,8 @@
 \usepackage[european,cuteinductors,siunitx,straightvoltages]{circuitikz}
   \tikzset{every picture/.style={execute at begin picture={\shorthandoff{:;!?};}}}
 \usetikzlibrary{positioning, fit, calc}
-        
-\input{/home/pierre-antoine/Scripts/Raccourcis.tex} %Custom
+
+\usepackage{raccourcis}
 
 %\setcounter{tocdepth}{5} %shows all levels
 %\ListOfExerciseInToc
@@ -81,4 +81,3 @@
 \maketitle
 \getexlist
 \end{document}
-
