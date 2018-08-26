@@ -6,7 +6,7 @@ PDF = $(TARGETS:%=%.pdf)
 
 MAKE_EXBOOK=./exbook.py
 
-LATEX=pdflatex -interaction=nonstop-mode -halt-on-error
+LATEX=pdflatex -interaction=batchmode
 
 ############################################################
 ### Targets
