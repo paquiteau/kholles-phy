@@ -16,11 +16,13 @@ default: complet.pdf
 all: $(PDF)
 
 clean:
-	@rm -f $(TARGETS:%=%.tex) $(TARGETS:%=%.aux) $(TARGETS:%=%.toc) $(TARGETS:%=%.out) $(TARGETS:%=%.log) $(TARGETS:%=%.loe)
+	@rm -f $(TARGETS:%=%.tex) $(TARGETS:%=%.aux) $(TARGETS:%=%.toc)\
+		   $(TARGETS:%=%.out) $(TARGETS:%=%.log) $(TARGETS:%=%.loe)
 	@rm -f *.pyc
 
 cleanall: clean
 	@rm -f $(PDF)
+
 
 ############################################################
 
