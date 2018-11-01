@@ -4,5 +4,6 @@
 "subtitle": "Exercices et Solutions",
 "bookoptions": [""],
 "exerciseoptions": ["noanswer"],
-"chapters" : ["Propag_signal","Optique"]
+"chapters" : ["Osc_harm",
+              "Propag_signal"]
 }

@@ -3,6 +3,6 @@
 "title": "Colles de Physique",
 "subtitle": "Exercices et Solutions",
 "bookoptions": [""],
-"exerciseoptions": ["noanswer"],
+"exerciseoptions": [""],
 "chapters" : ["Propag_signal","Optique"]
 }
