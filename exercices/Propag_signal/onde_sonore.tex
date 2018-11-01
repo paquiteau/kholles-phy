@@ -1,0 +1,52 @@
+\begin{Exercise}[title=Onde sonore stationnaires]
+  On dispose de deux haut-parleurs, alimentés en parallèle par un générateur
+  basses fréquences (GBF) de fréquence $f = 1000 Hz$ , ainsi que de deux
+  microphones. La vitesse du son est de \SI{340}{\m\per\s} . On utilise les deux
+  haut-parleurs, placés face à face à une distance d, aux points $O$ et $A$ de l’axe
+  $Ox$. On note $e(t) = e_0 cos (2\pi ft)$ la tension délivrée par le GBF. On supposera
+  que la présence d’un haut-parleur ne perturbe pas l’onde produite par l’autre
+  haut-parleur, et notamment n’engendre pas d’onde réfléchie. Chaque
+  haut-parleur est supposé émettre une onde acoustique de même phase que la
+  tension d’alimentation et on négligera toute atténuation des ondes sonores.
+  \Question Donner la forme générale de l’onde engendrée par le haut-parleur de
+  gauche $p_g(x, t)$
+  \Question Exprimer l’onde engendrée par le haut-parleur de droite $p_d(x, t)$.
+  On fera particulièrement attention au fait qu’en $x = d$ l’onde $p_d$ doit
+  posséder la même phase que la tension d’alimentation.
+
+  \Question L’onde entre les deux haut-parleurs est la superposition des deux
+  ondes déterminées ci-dessus. On désire qu’au niveau du haut-parleur de gauche
+  se forme un nœud de vibration. Exprimer les distances $d_n$ que l’on peut
+  alors choisir en fonction de la longueur d’onde $\lambda$ et d’un entier $n$.
+
+  \Question Qu’en est-il au niveau du haut-parleur de droite ? Tracer l’allure des
+  ondes obtenues à un certain temps pour les trois entiers les plus faibles.
+
+  \Question Reprendre les deux dernières questions si on veut obtenir sur le
+  haut- parleur de gauche un ventre de vibration. Expliquer qualitativement la
+  condition obtenue.
+\end{Exercise}
+\begin{Answer}
+  \Question
+  Le haut-parleur en $O$ émet une onde progressive sinusoïdale se
+propageant selon les $x$ croissants, soit $p_g (x, t) = A\cos(\omega t - kx)$ où $A$
+est l’amplitude de l’onde, $\omega = 2\pi f$ et $k = c$ où c’est la vitesse de
+l’onde sonore. On vérifie qu’en effet en $x = 0$ la phase de l’onde est la
+même que la tension d’alimentation, ie $\omega t = 2\pi ft$.
+  \Question Le haut-parleur situé en $A$ émet une onde progressive sinusoïdale se
+propageant selon les $x$ décroissants, soit  $p d (x, t) = A cos(\omega t + kx +
+\phi)$ où $\phi$ est une constante. En $x = d$ la phase doit être égale à $\omega t =
+\omega t + kd + \phi$ donc $\phi = -kd$ . Donc it $p_d(x, t) = A\cos(\omega t + k(x -
+d))$
+
+\Question $p(x,t) = p_d(x, t) + p_g(x, t) = A\cos(\omega t - kx) + A\cos(\omega t + k(x - d)) = 2Acos (\omega t-\frac{kd}{2})\cos(kx - \frac{kd}{2})$
+Pour qu’un nœud de vibration se forme au niveau du haut-parleur de  gauche, il faut que $p(0, t) = 0$ à chaque instant soit$ cos (\frac{kd}{2}) = 0$ où $\frac{kd}{2}= \frac{\pi}{2}+n\pi$ donc $d_n=\frac{\lambda}{2}+n\lambda$
+\Question Au niveau du haut-parleur de droite, la pression est exactement la
+même : c’est aussi un nœud de vibration.
+\Question Cette fois-ci il faut que l’amplitude de vibration en x = 0 soit maximale, soit $\cos(\frac{kd}{2})=\pm 1$. On en déduit $\frac{kd}{2} = n\pi$ ou encore $d_n'=n\lambda$. L’autre haut-parleur est aussi un ventre de vibration. Si les deux haut-parleurs sont séparés d’une distance égale à un nombre entier de longueurs d’onde, l’onde partant d’un haut-parleur garde la même phase
+en arrivant sur l’autre haut-parleur. Les interférences y sont alors
+constructives.
+
+
+
+\end{Answer}
