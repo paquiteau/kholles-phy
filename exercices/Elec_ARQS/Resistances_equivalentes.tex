@@ -35,8 +35,34 @@
 \end{Exercise}
 \begin{Answer}
   \ExePart
+Replier sur la diagonale les points d'équipotentiels.
   $R_{eq}=\frac{13}{7}R$\\
   \ExePart \Question $5R/4$, $3R/2$ $7R/8$ \Question $5R/6$, $R$,
-  $7R/12$ \ExePart \Question
-  $R_{eq}=\frac{2R_1R_2+RR_1+RR_2}{2R+R_1+R_2}$ \Question $I=1 A $
+  $7R/12$
+  \ExePart \Question
+  On a :
+  \[
+    \begin{cases}
+      u = u_2'-u_c+u_2 = u_1'+u_c+u_1\\
+      i = i_1+i_2 = i_1'+i_2' \\
+      i_c = i_1'-i_2  \\
+    \end{cases}
+    \implies
+    \begin{cases}
+      2u = R_1(i+i_c)+R_2(i-i_c)\\
+      0 = 2Ri_c +R_1(i+i_c)-R_2(i-i_c)\\
+      i+i_c = i_1+i_1'\\
+      2 i = i_1+i_1'+i_2+i_2'
+    \end{cases}
+  \]
+  Donc :
+  \[
+    \begin{cases}
+      i_c  = \frac{R_2-R_1}{2R+R_1+R_2}i  = a i \\
+      2 u = R_1(1+a)i+R_2(1-a)i
+    \end{cases}
+\]
+Donc:
+\[R_{eq}=\frac{2R_1R_2+RR_1+RR_2}{2R+R_1+R_2}\]
+\Question $I=1 A $
 \end{Answer}

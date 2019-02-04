@@ -3,5 +3,8 @@
 	\emph{Donnée : $R_T=6400 km$ $M_T=$\SI{5,972e24}{\kg} $\mathcal{G}=$\SI{6.67e-11}{\N\m^{2}\kg^{-2}}}
 \end{Exercise}
 \begin{Answer}
-	PFD sur le satellite dans un mouvement circulaire uniforme ($a =-V^2/R$)
+  PFD sur le satellite dans un mouvement circulaire uniforme ($a =-V^2/(h+R_T) = (h+R_T)\Omega^2$)avec $\Omega = 2\pi/T$ et $T=24h=86400s$:
+  \[
+    M_s \frac{V^2}{(h+R_T)} = -\mathcal{G}\frac{M_sM_T}{R_T+h} \implies h = \sqrt[3]{\frac{\mathcal{G}M_TT^2}{4\pi^2}} -R_T \equals_{A.N.} \text{\SI{36e3}{km}}
+  \]
 \end{Answer}
