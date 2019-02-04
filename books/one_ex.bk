@@ -2,7 +2,7 @@
 "template": "seance.tmpl",
 "title": "Colles de Physique",
 "subtitle": "Exercices et Solutions",
-"bookoptions": ["oneexerciseperpage"],
-"exerciseoptions": ["answerdelayed"],
-"exercises" : ["./Propag_signal/onde_sonore.tex" ]
+"bookoptions": [""],
+"exerciseoptions": [""],
+"exercises" : ["Cinematique/chien.tex"]
 }
