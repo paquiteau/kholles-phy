@@ -1,0 +1,60 @@
+\begin{Exercise}[title=La courbe du chien]
+  Il s’agit d’établir l'équation de la trajectoire que parcourt un chien lorsque son maître, éloigné, l'appelle tout en se déplaçant sur une droite perpendiculairement au segment de droite les séparant à l’instant origine. On conviendra qu'à cet instant, le maître est à une distance $a$ du chien ; il se déplace de façon uniforme à la vitesse $v$. le chien accourt à une vitesse $kv$ et de façon à être, à tout moment, dirigé vers son maître. On peut donc choisir un repère orthonormé, tel que le chien soit au point $ O$ de coordonnées $(0,0)$ et le maître au point $A$ de coordonnées $(a,0)$ au départ, la droite décrite par le maître étant celle d’équation $x = a$. On désigne par $x$ et $y$ les coordonnées du chien au bout du temps $t$.
+  \Question Faire un schéma
+  \Question Déterminer l'équation de la courbe.
+\end{Exercise}
+\begin{Answer}
+  Au bout du temps « $t$ », le maître est en  « $M$ », tel que $AM = vt$.
+  Désignons par « $l$ » l'arc de trajectoire « $OC$ » parcouru par le chien à la vitesse $kv$. Calculons la pente au point « $C$ »  :
+\[\frac{{\mathrm d} y}{{\mathrm d} x} = \tan(\alpha)= \frac{BM}{BC} =\frac{{\mathrm d} y}{{\mathrm d} x} = \frac{vt-y}{a-x} \]
+D'autre part, au temps $t$, le chien a parcouru une longueur $l = kvt$, ce qui donne :
+\[(a-x)\frac{{\mathrm d} y}{{\mathrm d} x} +y = \frac{l}{k} \]
+avec $x \leqslant a.$En dérivant par rapport à $x$, on obtient :
+\[\left[(a-x)\frac{{\mathrm d} y}{{\mathrm d} x}\right]' = -\frac{{\mathrm d} y}{{\mathrm d} x} + (a-x)\frac{{\mathrm d^2} y}{{\mathrm d} x^2}\]
+Soit :
+\[-\frac{{\mathrm d} y}{{\mathrm d} x} + (a-x)\frac{{\mathrm d^2} y}{{\mathrm d} x^2} +  \frac{{\mathrm d} y}{{\mathrm d} x} = \frac{1}{k} \frac{{\mathrm d} l}{{\mathrm d} x} \implies
+(a-x)\frac{{\mathrm d^2} y}{{\mathrm d} x^2} = \frac{1}{k} \frac{{\mathrm d} l}{{\mathrm d} x}\]
+En utilisant le fait que ${\mathrm d} l^2 = {\mathrm d} x^2+{\mathrm d} y^2 $, et en posant $y'=\frac{{\mathrm d} y}{{\mathrm d} x} $, on obtient finalement  l'équation suivante:
+\[(a-x)\frac{{\mathrm d} y'}{{\mathrm d} x} = \frac{1}{k}\sqrt{1+y'^2}
+\implies \frac{{\mathrm d} y'}{\sqrt{1+y'^2}} = \frac{1}{k}\frac{{\mathrm d} x}{a-x} \]
+En intégrant on obtient :
+\[\ln (y'+ \sqrt{1+y'^2}) = - \frac{1}{k}\ln(a-x)+C \]
+À l'instant $t=0$, le chien est au point O et sa trajectoire est tangente à la droite des abscisses, donc $y'=0$ et $x=0$, ce qui donne pour la constante : $ C =  \frac{1}{k}\ln(a)$
+Il vient alors :
+
+\[\ln (y'+ \sqrt{1+y'^2}) = - \frac{1}{k}\ln(a-x) + \frac{1}{k}\ln(a) = \ln\left(\sqrt[k]{\frac{a}{a-x}}\right) \]
+
+ou encore :
+\[y'+ \sqrt{1+y'^2} = \sqrt[k]{\frac{a}{a-x}}\]
+De l'équation aux logarithmes ci-dessus, on déduit aussi l’égalité des inverses, et donc :
+
+\[y' - \sqrt{1+y'^2} = -\sqrt[k]{\frac{a-x}{a}}\]
+
+puis, en faisant la somme des deux dernières équations il vient :
+\[y'- \sqrt{1+y'^2} + y'+\sqrt{1+y'^2} = -\sqrt[k]{\frac{a-x}{a}} + \sqrt[k]{\frac{a}{a-x}}\]
+L'équation donnant $y'$ est alors :
+
+\[y' = \frac{1}{2} (-\sqrt[k]{\frac{a-x}{a}}+\sqrt[k]{\frac{a}{a-x}})\]
+On peut alors intégrer :
+\[ y = \frac{1}{2} \left(\int{-\sqrt[k]{\frac{a-x}{a}}}{\mathrm d} x + \int{\sqrt[k]{\frac{a}{a-x}}} {\mathrm d} x\right).\]
+
+Si $k$ est différent de 1, on obtient, en utilisant le fait qu’une primitive de $x^N$ est $\frac{x^{N+1}}{N+1}$,
+
+\[ y=\frac{k(a-x)}{2}\left(\frac{1}{k+1}\left(\frac{a-x}{a}\right)^{\frac{1}{k}}+\frac{1}{1-k}\left(\frac{a-x}{a}\right)^{-\frac{1}{k}}\right)+D\]
+Pour x = 0 ; y = 0 on a $D= \frac{ka}{k^2-1} $,
+L'équation de la trajectoire du chien est donc, pour k différent de 1  :
+
+\[y = \frac{k(a-x)}{2}(\frac{1}{k+1}(\frac{a-x}{a})^{\frac{1}{k}}+\frac{1}{1-k}(\frac{a-x}{a})^{-\frac{1}{k}})+\frac{ka}{k^2-1} \]
+Si k= 1, l’intégration de
+$ y'=\frac{1}{2}(-\frac{a-x}{a}+\frac{a}{a-x})$ donne \[y=\frac{(a-x)^2}{4a}-\frac{a}{2}\ln (a-x) +D\]
+ et on détermine comme auparavant la constante D à partir de la valeur initiale $x=0, y=0$,  qui fournit : $D=\frac{a}{2}\ln a-\frac{a}{4}$
+soit finalement :
+$y=\frac{(a-x)^2}{4a}-\frac{a}{2}\ln (a-x) +\frac{a}{2}\ln a-\frac{a}{4},$
+ou encore :
+$y=\frac{x^2-2ax}{4a}+\frac{a}{2}\ln{\frac{a}{a-x}}.$
+On obtient finalement l'équation de la trajectoire du chien, si k est différent de 1 :
+\[y = \frac{k(a-x)}{2}\left(\frac{1}{k+1}\left(\frac{a-x}{a}\right)^{\frac{1}{k}}+\frac{1}{1-k}\left(\frac{a-x}{a}\right)^{-\frac{1}{k}}\right)+\frac{ka}{k^2-1} \]
+et si k=1:
+\[y=\frac{x^2-2ax}{4a}+\frac{a}{2}\ln{\frac{a}{a-x}}\]
+
+\end{Answer}

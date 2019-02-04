@@ -1,0 +1,67 @@
+\begin{Exercise}[title=Traitement Matriciel]
+   On considère un rayon lumineux arrivant sur une lentille convergente de
+   distance focale $f_0$ . A une distance $l_1$ du foyer objet, le rayon est à
+   une distance $x_1$ de l'axe optique et forme un angle $\alpha_1$ avec ce dernier.
+   A une distance $l_2$ du foyer image, le rayon est à une distance $x_2$ de
+   l'axe optique et forme un angle $\alpha_2$ avec ce dernier.
+   \begin{center}
+     \begin{tikzpicture}
+       \draw[->] (-5,0) -- (0,0) node[below left]{$O$} --(5,0);
+       \draw[<->, very thick] (0,-2) --(0,2);
+       \coordinate (A) at (-4,1.8);
+       \coordinate (B) at (4.2,-2);
+       \coordinate (C) at (0,1);
+       \coordinate (F) at (-2.5,0);
+       \coordinate (F1) at (2.5,0);
+       \node  at (F){|};
+       \node  at (F1){|};
+       \node[above=0.1cm] at (F){$F$};
+       \node[above=0.1cm] at (F1){$F'$};
+       \draw (A) ++(150:1) -- (C) -- (B) -- ++(-37:1);
+       \draw[dashed] (A) ++(-1,0) -- (0,1.8)  (B)++(1,0) -- (0,-2);
+       \draw[<-] (A) -- (-4,0) node[midway, left]{$x_1$} -- (F) node[midway, below]{$l_1$}
+       (B) |- (4.2,0) node[near start,right]{$x_2$}-- (F1) node[midway, below]{$l_2$}
+       (C) -- (0,0)node[midway,left]{$x_1'$}
+       (2.5,-0.8) -- (F1) node[midway,right]{$x_2'$};
+       \draw (A) arc (180:165:1) node[midway, left]{$\alpha_1$}
+       (B) ++(0.5,0) arc (0:-37:0.5) node[midway, right]{$\alpha_2$};
+       \end{tikzpicture}
+   \end{center}
+
+Question préliminaire : indiquez le signe des angles $\alpha_1,\alpha_2$
+et des distances $x_1,x_2,x'_1,x'_2$.
+\Question Exprimer en fonction de $x_1$ et $\alpha_1$ la distance $x_1'$ entre le centre optique et le rayon lumineux.
+\Question Exprimer en fonction de $\alpha_1$ la distance $x_2'$ entre le foyer image
+$F$ et le rayon lumineux.
+\Question Exprimer $x_2'$ en fonction de $\alpha_2$ et de $x_1'$ En déduire
+l'expression de $\alpha_2$ en fonction de $\alpha_1$ et $x_1$.
+\Question Exprimer $x_2$ en fonction de $\alpha_1$ et $x_1$.
+En déduire l'expression de $M$ tel que  $
+\begin{pmatrix}
+  x_2\\
+f'\alpha_2
+\end{pmatrix} = M
+\begin{pmatrix}
+  x_1\\
+  f'\alpha_1
+\end{pmatrix}
+$
+
+\end{Exercise}
+\begin{Answer}
+
+  En traçant le rayon parallèle passant par le centre optique :
+  $\frac{x_1-x_1'}{l_1+f'}=-\alpha_1$ donc $x_1'=x_1+\alpha_1(l_1+f')$. De même
+  $x_2'=\alpha_1f'$. Avec le rayon réel, $\frac{x_1'-x_2'}{f'}=-\alpha_2$ donc
+  $\alpha_2=-\frac{x_1}{f'}- \frac{\alpha_1l_1}{f'}$. De même :
+  $\frac{x_1'-x_2}{l_2+f'}=-\alpha_2$. Et on en déduit : $x_2 =-x_1
+  \frac{l_2}{f'}+\alpha_1\left(f'-\frac{l_1l_2}{f'} \right)$ Donc:
+  \[
+M =
+\begin{pmatrix}
+  \frac{-l_2}{f'} & 1-\frac{l_1l_2}{f'^2}\\
+  -1 & \frac{-l_1}{f'}
+\end{pmatrix}
+  \]
+
+\end{Answer}
