@@ -1,0 +1,27 @@
+\begin{Exercise}[title=Pendule avec un obstacle]
+  On considère un pendule simple modifié. Lorsque $\theta=0$, un clou en $O'$ bloque la partie haute du fil vers la gauche ($OO'=\frac{L}{3}$).
+
+  À la date $t=0$, on abandonne le mobile $M$ sans vitesse initiale, en donnant au fil une inclinaison initiale $\theta(0)=\theta_0>0$. On note $t_1$ la date de la première rencontre du fil avec le clou et $t_2$ la date de la première annulation de la vitesse du mobile pour $\theta <0$.
+
+  Établir l'équation différentielle vérifiée par $\theta$ dans la première phase du mouvement.
+    \Question Linéariser cette équation dans l'hypothèse des petites oscillations. Déterminer la durée de la première phase du mouvement sans résoudre l'équation.
+    \Question Déterminer la vitesse $v_1^-$ de $M$ à la date $t_1^-$. En déduire la vitesse angulaire $\omega_1^-$ à cette date.
+    \Question Le blocage du fil par le clou ne s'accompagne d'aucun transfert énergétique. Déterminer la vitesse $v_1^+$ de $M$ à la date $t_1^+$. En déduire la vitesse angulaire $\omega_1^+$.
+    \Question Donner la durée de la deuxième phase.
+    \Question Déterminer l'expression de l'angle $\theta$ à la date $t_2$.
+    \Question Décrire brièvement la suite du mouvement de ce système et donner l'expression de la période $T$.
+    \Question Dresser l'allure du portrait de phase. Conclure.
+
+    \begin{center}
+      \begin{tikzpicture}
+        \draw[dashed] (0,0) node{$\bullet$}node[left]{$O$} -- ++(0,-+(20:1) node[above]{$\vec{u_\theta}$};
+        % partie droite :
+        \draw[dashed] (5,0) node{$\bullet$}node[left]{$O$} -- ++(0,-2) node[midway,left]{$\frac{L}{3}$} node{$\bullet$}node[left]{$O'$}-- ++(0,-4) node{$\bullet$};
+        \draw (5,0) -- (5,-2) -- ++(-130:4) node[midway,above]{$\frac{2L}{3}$}
+        (5,-4) arc(-90:-130:2) node[midway, below]{$\theta_2$};
+      \end{tikzpicture}
+    \end{center}
+  \end{Exercise}
+\begin{Answer}
+  Solution
+\end{Answer}

@@ -1,0 +1,34 @@
+
+\begin{Exercise}[title=Convertisseur Analogique numérique]
+  Un convertisseur numérique analogique délivre une tension continue $U$ proportionnelle à un nombre décimal $N$ qu'on écrit en base $2$. On suppose $0 \leq N \leq 15$ et $N=a_0 2^0 + a_1 2^1+ a_2 2^2 + a_3 2^3$. On utilise le montage suivant :
+  \begin{center}
+    \begin{circuitikz}
+      \foreach \i in {1,2,3}
+      {\draw (\i*2.5,0) to[R,l=$2R$,v=$U_\i$] ++(0,2) to[I,i<=$I_0$] ++(0,2) to[spst,l=$K_\i$] ++(0,1);
+        \draw (\i*2.5-2.5,2) to[R,l=$R$] ++(2.5,0);}
+      \draw (0,0) to[R,l=$R$] ++(0,2) to[I,i<=$I_0$]++(0,2) to[spst,l=$K_0$] ++(0,1);
+      \draw (-1.5,0) -- (7.5,0) (-1.5,0) -- (-1.5,5) -- (7.5,5);
+      \draw (7.5,2) to[short] ++(2,0)node[above]{$A$} to[R] ++(0,-2) node[below]{$M$} -- ++(-2,0) node[ground]{};
+    \end{circuitikz}
+  \end{center}
+
+  \Question On suppose que seul $K_3$ est fermé, montrer que le montage est équivalent à (où on exprimera $x$ en fonction de $R$) :
+
+  \begin{center}
+    \begin{circuitikz}
+      \draw (0,0) node[ground]{} to[R,l=$x$,v=$U_{3}$] ++(0,2) to[I,i<=$a_3I_0$] ++(0,2) -- ++(-1,0) |- (0,0)
+      (0,2) to[short] ++(2,0) node[above]{A} to[R,l=$2R$] ++(0,-2) node[below]{M} -- (0,0);
+    \end{circuitikz}
+  \end{center}
+  \Question En déduire l'expression de la tension $U_{AM}$.
+  \Question On suppose que $K_2$ est fermé. Nouveau montage équivalent ? Exprimer $U_2$ et déterminer la relation entre $U_2$ et $U_{AM}$. En déduire l'expression de la tension $U_{AM}$ en fonction de $R, a_2$ et $I_0$.
+  \Question On suppose que $K_1$ est fermé. Nouveau montage équivalent ? Exprimer $U_1$ et déterminer la relation entre $U_1$ et $U_2$. En déduire l'expression de la tension $U_{AM}$ en fonction de $R, a_1$ et $I_0$.
+  \Question On suppose que $K_0$ est fermé. Nouveau montage équivalent ? Exprimer $U_0$ et déterminer la relation entre $U_0$ et $U_1$. En déduire l'expression de la tension $U_{AM}$ en fonction de $R, a_0$ et $I_0$.
+  \Question Lorsque tous les interrupteurs peuvent être fermés, déterminer l'expression de $U_{AM}$ en fonction de $R, I_0$ et des $a_i$.
+  \Question Montrer que l'on peut l'écrire sous la forme $U_{AM} = \frac{RI_0}{k}(a_0 2^0 + a_1 2^1+ a_2 2^2 + a_3 2^3)$.
+  \Question Quelle est la valeur minimale de $U_{AM}$, sa plus petite variation possible, sa valeur maximale ?
+
+\end{Exercise}
+\begin{Answer}
+  Solution
+\end{Answer}
