@@ -4,8 +4,16 @@ Vous disposez d'un laser de longueur d'onde $\lambda=\SI{633}{\nano\meter}$ , d'
 \begin{Answer}
 On utilise le phénomène de diffraction:
 %\begin{figure}[h]
-	\begin{center}
-	\input{./fig/Diffract.tex}
+\begin{center}
+  \begin{tikzpicture}
+    \draw[dashed] (0,0)node{$\bullet$} -- ++(4,0);
+    \draw[line width=0.5em] (4,2.5) --(4,-2.5);
+    \draw[latex-latex] (4.2,2.5) --(4.2,-2.5) node[midway,right]{$L$};
+    \draw[latex-latex] (0,-2.7) --++ (4,0) node[midway,below]{$D$};
+    \draw[thick] (-0.5,0.2) -- ++(0.5,0) to node[currarrow,rotate=20]{} (4,2)
+    (-0.5,-0.2) -- ++(0.5,0) to node[currarrow,rotate=-20]{} (4,-2);
+    \draw(1,0) arc(0:18:2) node[midway, right]{$\theta$};
+  \end{tikzpicture}
 	\end{center}
 %\end{figure}
 on a $\sin(\theta)=\frac{\lambda}{D} \simeq 10^{-3} $et $\tan(\theta)=\frac{L}{2D}$ on en déduit : $d \simeq \frac{2\lambda D}{L}$
