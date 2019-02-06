@@ -14,11 +14,15 @@
 
     \begin{center}
       \begin{tikzpicture}
-        \draw[dashed] (0,0) node{$\bullet$}node[left]{$O$} -- ++(0,-+(20:1) node[above]{$\vec{u_\theta}$};
+        \draw[dashed] (0,0) node{$\bullet$}node[left]{$O$} -- ++(0,-2) node[midway,left]{$\frac{L}{3}$} node{$\bullet$}node[left]{$O'$}-- ++(0,-4) node{$\bullet$};
+        \draw (0,0) -- (-60:5) node{$\bullet$} node[below]{$M(m)$};
+        \draw (0,-3) arc(-90:-60:3) node[midway, below]{$\theta_0$};
+        \draw[very thick,-latex] (0,0) -- (-60:0.8) node[right]{$\vec{u_r}$};
+        \draw[very thick,-latex] (0,0) -- (30:0.8) node[right]{$\vec{u_\theta}$};
         % partie droite :
-        \draw[dashed] (5,0) node{$\bullet$}node[left]{$O$} -- ++(0,-2) node[midway,left]{$\frac{L}{3}$} node{$\bullet$}node[left]{$O'$}-- ++(0,-4) node{$\bullet$};
-        \draw (5,0) -- (5,-2) -- ++(-130:4) node[midway,above]{$\frac{2L}{3}$}
-        (5,-4) arc(-90:-130:2) node[midway, below]{$\theta_2$};
+        \draw[dashed] (8,0) node{$\bullet$}node[left]{$O$} -- ++(0,-2) node[midway,left]{$\frac{L}{3}$} node{$\bullet$}node[left]{$O'$}-- ++(0,-4) node{$\bullet$};
+        \draw (8,0) -- (8,-2) -- ++(-130:4) node[midway,above]{$\frac{2L}{3}$}
+        (8,-4) arc(-90:-130:2) node[midway, below]{$\theta_2$};
       \end{tikzpicture}
     \end{center}
   \end{Exercise}

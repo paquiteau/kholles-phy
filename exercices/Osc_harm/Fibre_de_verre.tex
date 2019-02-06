@@ -8,7 +8,19 @@
   $Y$ que l'on appelle la flèche.
   % \begin{figure}[h!]
   \begin{center}
-    \includegraphics[scale=0.5]{./fig/fibre_ressort.png}
+    \begin{tikzpicture}
+      \draw[fill=gray!40,draw] (-1,-1.5) rectangle (0.1,1.5);
+      \draw[fill=white] (0,0.2) arc(90:70:11.45)
+      (0,-0.2) arc (90:70:11.45)coordinate(F)  --++(0,0.4) (0,0.2) --(0,-0.2);
+      \draw[dashed] (0,0.2) rectangle (4,-0.2);
+      \draw[very thick,-latex] (F) -- ++(0,-1) node[midway,right]{$\vec{F}$};
+      \draw[latex-latex] (F)++(0.2,0) -- (4.1,0.2) node[midway,right]{$Y$};
+
+      \draw (6,1) node[ground,rotate=180]{} to[L,l=$k$] ++(0,-2) coordinate(F2);
+      \draw[very thick,-latex]
+      (F) -- ++(0,-1) node[midway,right]{$\vec{F}$}
+      (F2) -- ++(0,-1) node[midway,right]{$\vec{F}$};
+    \end{tikzpicture}
   \end{center}
   % \end{figure}
   La flèche Y est donnée par la relation suivante (on notera la présence du
