@@ -3,9 +3,39 @@
 
   Un dipôle résistor $X_1X_2$ de résistance $2R$ est branché en parallèle à l'extrémité de la chaîne.
 
-  % \begin{center}
-  %   \includegraphics[scale=0.75]{coax.jpeg}
-  % \end{center}
+  \begin{center}
+    \begin{circuitikz}
+      \draw (0,0) node[below]{$A_2$}
+      to[R,l=$R/2$,*-] ++(2,0)
+      to[short,-*]++(1.5,0) node[below]{$X_2$}
+      (0,2)node[above]{$A_1$}
+      to[R,l=$R/2$,*-] ++(2,0)
+      to[short,-*]++(1.5,0) node[above]{$X_1$}
+      (0,0) to[open,v=$V_0$] ++(0,2)
+      (2,0) to[R,l=$2R$] ++(0,2)
+      (3.5,0) to[R,l=$2R$,v=$V_1$] ++(0,2)
+      ;
+      \draw[latex-latex]
+      (0,-1) -- (2,-1) node[midway,below]{1 module};
+    \end{circuitikz}%
+    \begin{circuitikz}
+      \draw (0,0) node[below]{$A_2$}
+      to[R,l=$R/2$,*-] ++(2,0)
+      to[R,l=$R/2$,*-] ++(2,0)
+      to[short,-*]++(1.5,0) node[below]{$X_2$}
+      (0,2)node[above]{$A_1$}
+      to[R,l=$R/2$,*-] ++(2,0)
+      to[R,l=$R/2$,*-] ++(2,0)
+      to[short,-*]++(1.5,0) node[above]{$X_1$}
+      (0,0) to[open,v=$V_0$] ++(0,2)
+      (2,0) to[R,l=$2R$] ++(0,2)
+      (4,0) to[R,l=$2R$] ++(0,2)
+      (5.5,0) to[R,l=$2R$,v=$V_1$] ++(0,2)
+      ;
+      \draw[latex-latex]
+      (0,-1) -- (4,-1) node[midway,below]{2 modules};
+    \end{circuitikz}
+  \end{center}
 
   \Question Le dipôle est équivalent à un résistor.
 
