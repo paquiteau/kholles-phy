@@ -6,8 +6,20 @@ L’autre extrémité du fil est fixée à une particule $M$
 de masse $m$,astreinte à glisser sans frottement sur le plan horizontal.La partie non enroulée du fil est tendue.
 \emph{Donnée : $R=$\SI{0.2}{m} ; $m=$\SI{0.04}{kg}; $l_0=I_0M = $\SI{0.5}{m}; $v_0 = $\SI{0.1}{\m\per\s}}
 		\end{minipage} &
-	\begin{minipage}{.4\linewidth}
-	\includegraphics[width=\textwidth]{../fig/Cylindre.png}
+     \begin{minipage}{.4\linewidth}
+       \begin{tikzpicture}
+         \draw (0,0) circle (2.5)
+         (0,0) -- (2.5,0)
+         (0,0) -- (0,2.5)
+         (0,0) -- (35:2.5) node{$\bullet$}node[right]{$I$} -- ++(125:1) node[midway,right]{$l(t)$}node{$\bullet$}node[above]{$M(t)$}
+         (0,0) -- (125:2.5);
+         \draw [thick,-latex] (0,0) -- (1,0) node[below]{$x$};
+         \draw [thick,-latex] (0,0) -- (0,1) node[right]{$y$};
+         \draw [thick,-latex] (0,0) -- (35:1) node[above]{$u_r$};
+         \draw [thick,-latex] (0,0) --(125:1) node[left]{$u_\theta$};
+         \draw[dashed] (2.5,0) -- ++(0,3.5) node{$\bullet$} node[right]{$M(t=0)$};
+         \draw [thick,-latex] (2.5,3.5) -- ++(-1,0) node[midway,below]{$v_0$};
+       \end{tikzpicture}
 	\end{minipage}
 	\end{tabular}
 
