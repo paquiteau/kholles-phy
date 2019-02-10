@@ -10,7 +10,19 @@
     \end{enumerate}
   \end{minipage}\hspace{.05\linewidth}
   \begin{minipage}{.45\linewidth}
-    \includegraphics[width=\linewidth]{thomson.png}
+    \begin{tikzpicture}
+
+      \fill[color=gray!40] (0.5,-2) rectangle(1.5,2);
+      \draw[dashed] (0.5,-2) -- ++(0,4) (1.5,-2) --++(0,4);
+      \draw (0,0) -- ++(5.5,0);
+      \draw[thick] (5,-2) -- (5,3);
+      \draw[rounded corners=10pt] (0,0) -- (1,0) -- (5,2.8);
+      \draw[latex-latex] (0.5,-1) -- (1.5,-1) node[midway,below]{$a$};
+      \draw[latex-latex] (1.5,-1) --(5,-1) node[midway,below]{$L$};
+      \draw[latex-latex] (5.2,0) -- (5.2,2.8) node[midway,right]{$d$};
+      \draw (2,0) arc(0:35:1) node[midway,right]{$\theta$};
+      \draw[thick,-latex] (1,1.5) node[above]{$\vec{E}$} -- ++(0,-1);
+    \end{tikzpicture}
   \end{minipage}
 \end{Exercise}
 \begin{Answer}
