@@ -80,7 +80,7 @@
 \fi
 
 
-
+\renewcommand{\ExerciseName}{Exercice}
 \renewcommand{\ExerciseHeader}{\medskip\flushleft{\textbf{\large
       \ExerciseName~\ExerciseHeaderNB : \ExerciseTitle}\par}}
 \renewcommand{\AnswerHeader}{\medskip\flushleft{
