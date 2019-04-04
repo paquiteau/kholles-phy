@@ -4,7 +4,9 @@
 Created on Thu Jul 26 18:06:21 2018
 
 @author: pierre-antoine
+Génère un fichier .tex contenant les exercices désirés avec le formatage voulu d'après un fichier recette .bk
 """
+
 import getopt
 import sys
 from glob import glob
@@ -81,6 +83,7 @@ def get_list(exercices, library, chapterlist):
 
 
 def parseTemplate(template):
+    """ renvoi les paramètres par défaut du template latex """
     embeddedJsonPattern = re.compile(r"^%%:")
     f = open(template)
     code = [line[3:-1] for line in f if embeddedJsonPattern.match(line)]
@@ -118,6 +121,9 @@ def toValue(parameter, data):
 
 
 def formatDeclaration(name, parameter):
+    """ déclare le macro TeX associé au paramètre 
+    \def\set@<name>{\def\get<name>{}}
+    """
     value = ""
     if "default" in parameter:
         value = parameter["default"]
@@ -125,20 +131,27 @@ def formatDeclaration(name, parameter):
 
 
 def formatDefinition(name, value):
+    """
+   Invoque le macro TeX défini précédement
+    """
     return '\\set@{name}{{{value}}}\n'.format(name=name, value=value)
 
 
 def recursiveFind(root_directory, pattern):
+    """
+    récupère tous les fichiers dans les sous-dossiers vérifiant le pattern 
+    """
     matches = []
     for dirname in os.listdir(root_directory):
         if os.path.isdir(os.path.join(root_directory, dirname)):
             for filename in os.listdir(os.path.join(root_directory, dirname)):
-                if filename.endswith(".tex"):
+                if filename.endswith(pattern):
                     matches.append(os.path.join(dirname, filename))
     return matches
 
 
 def makeTeXfile(eb, library, output):
+    """ Créer un fichier tex d'après le dictionnaire  eb """
     name = output[:-4]
 
     # default values
@@ -177,7 +190,7 @@ def makeTeXfile(eb, library, output):
                     name, toValue(parameters[name], value)))
         # output exercise list
         if exercises == "all":
-            exercises = recursiveFind(library, '*.tex')
+            exercises = recursiveFind(library, '.tex')
         if len(chapters) > 0:
             for chap in chapters:
                 exercises += [os.path.join(chap, f)
