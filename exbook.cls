@@ -47,6 +47,9 @@
 				urlcolor=black}
 \RequirePackage[lastexercise]{exercise}
 
+\RequirePackage{tikz}
+\usetikzlibrary{decorations.pathreplacing}
+
 % Start
 \def\subtitle#1{\gdef\@subtitle{#1}}
 
