@@ -3,6 +3,17 @@
     $\alpha$ (noyau d'hélium $He^{2+}$). Une particule $\alpha$ de masse $m \simeq 4m_p$ arrive
     avec une vitesse $v_0$ dont le support est distant de $b$ du noyau d'or
     $^{197}_{79}Au$.
+
+    \begin{center}
+      \begin{tikzpicture}
+        \draw (0,0) -- (10,0);
+        \draw[thick,-latex] (0.2,0) -- ++(1,0) node[midway,above]{$\overrightarrow{v_0}$};
+        \draw[latex-latex] (8,0) -- ++(0,-2) ;
+        \node (F) at (8.5,-2) {$\bullet$};
+        \node[left] at (F) {$F$};
+      \end{tikzpicture}
+    \end{center}
+
     \Question Quelle la force qui s'exerce sur la particule ? pourquoi peut
     on considérer le noyau d'or immobile pendant l'interaction?
     \Question Pourquoi l'énergie et le moment cinétique de la particule $\alpha$ sont
@@ -19,5 +30,32 @@
     problème. Étudier et interpréter les variations de $r_m$ avec E et b.
 \end{Exercise}
 \begin{Answer}
-	~
+  \Question Le noyaux d'or et la particule $\alpha$ portent tous les deux une charges positive: la force coulombienne est donc répulsive:
+  \[
+    \vec{f} = \frac{2eZe}{4\pi\epsilon_0r^2}\vec{u_r}, \text{ soit } k = \frac{2Ze^2}{4\pi\epsilon_0}
+  \]
+  Le noyau d'or est 50 fois plus massif que la particule, on le considère fixe.
+  \Question La force conservative dérive de l'énergie potentielle donc:
+  \[
+    E= \frac{1}{2}mv^2+\frac{k}{r} = Cste = \frac{1}{2}mv_0^2
+  \]
+  La force est centrale : le moemnt cinétique en $F$ est constant. Avec les conditions initiales: $\vec{\sigma}= mv_0 b \vec{u_z}$
+  \Question En $r_m$, $v=0$ soit :
+  \[
+    r_m = \frac{Ze^2}{4\pi\epsilon_0m_pv_0^2}
+  \]
+  A.N. $v_0 =\left(frac{Ze^2}{4\pi\epsilon_0m_pr_m}\right)^{1/2} =1,0.10^8 m/s$. tres grande énergie !
+  \Question
+  \[
+    E = \frac{1}{2}m\dot{r} + \frac{\sigma^2}{2mr^2} +E_p(r) 
+  \]
+  En $r_m$ on a $\dot{r}=0$ soit:
+  \[
+    E = V_{eff} = \frac{mv_0^2b^2}{2r^2}+\frac{k}{r} \implies r^2-\frac{k}{E}r-b^2 = 0
+  \]
+  On a la solution:
+  \[
+    r_m = \frac{k}{2E}+\sqrt{\frac{k^2}{4E^2}+b^2}
+  \]
+  On retrouve le résultat précédent pour $b=0$. si $b$ est grand , la particule n'est pas dévié ($r_m=b$).
 \end{Answer}

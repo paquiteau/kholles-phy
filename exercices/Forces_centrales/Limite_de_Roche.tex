@@ -4,7 +4,19 @@ On cherche à déterminer la distance en dessous de laquelle une comète s'appro
 	\item Le réferentiel Jupitérocentrique est galiléen et Jupiter est un astre sphérique homogène.
 	\item La comète de masse volumique $\mu_c$ est en orbite circulaire de rayon $d$ autour de jupiter.
 	\item La comète est constituée de deux sphères identique de masse $m$ et de rayon$r$ homogènes elles sont liées entre elle par leur attraction gravitationnelle mutuelle.
-\end{itemize}
+    \end{itemize}
+    \begin{center}
+      \begin{tikzpicture}
+        \draw (0,0) node{$\bullet$} circle(2) node[above=1cm]{Jupiter};
+        \draw[dashed] (0,0) -- (10,0);
+        \draw (7.5,0) circle(0.5) node[below=0.7cm]{(1)} (8.5,0) circle(0.5)node[below=0.7cm]{(2)};
+        \draw[dotted] (0,0) -- (0,-1.8) (8,0) -- (8,-1.8)
+        (7.5,0)-- ++ (0,1) (8.5,0)-- ++ (0,1);
+        \draw[latex-latex] (7.5,0.8) -- (8.5,0.8) node[midway,above]{$2r$};
+        \draw[latex-latex] (0,-1.8) -- (8,-1.8) node[midway,below]{$d$};
+        \draw[thick,-latex] (0,0) -- ++(3,0) node[near end,above]{$\overrightarrow{u_r}$}; 
+      \end{tikzpicture}
+    \end{center}
 \Question Établir que le mouvement du centre d'inertie de la comète est uniforme puis déterminer l'expression de $\omega^2$ carré de la vitesse angulaire du mouvement.
 \Question On note $R$ la réaction de la sphère  de la comète la plus proche de jupiter sur la sphère la plus éloignée. À quelle condition le contact entre les deux sphères est-il rompu , à quelle distance $d_lim$ cela arrive t-il?
 \Question faire l'application numérique de $\frac{d_lim}{R_J}$.
@@ -12,5 +24,34 @@ On cherche à déterminer la distance en dessous de laquelle une comète s'appro
 \emph{Données : \gdr{M_j}{1,9e27}{kg}; \gdr{R_j}{7,1e4}{km}; \gdr{\mu_c}{1e3}{\kg\per\m\cubed}}
 \end{Exercise}
 \begin{Answer}
-De l'art de bien faire un DL.
+  \Question Le mouvement est à force central d'ou $C= r^2\dot{\theta} = Cst$. et comme le mouvement est considéré comme circulaire on a $r= d = cste$. D'où $ \omega = \dot{\theta}=cste$. On applique le PFD à l'ensemble $(1)+(2)$.
+  \[
+    -(2m)\omega^2d = -G \frac{mM_j}{(d-r)^2} - G \frac{mM_j}{(d+r)^2} \implies
+    \omega^2 = \frac{GM_j}{2d} \left[
+      \frac{1}{(d-r)^2} + \frac{1}{(d+r)^2}\right] \tag{(0')}
+  \]
+
+  \Question La sphère de gaucje (1) subit l'attraction de Jupiter, l'attraction de la sphère de droite et la réaction $-\overrightarrow{R} = R \vec{u_r}$. de la sphère (2), d'où:
+\[
+  -m \omega^2(d-r) = -G \frac{mM_j}{(d-r)^2}+ G \frac{m^2}{(2r)^2} - R \tag{(1)}
+\]
+On peux faire de même avec la sphère (2) subit l'attraction de Jupiter,celle de la sphère (1) et  la réaction opposée:
+\[
+-m \omega^2(d+r) = -G \frac{mM_j}{(d-r)^2}- G \frac{m^2}{(2r)^2} + R \tag{(2)}
+\]
+On a $(1)+(2) = (0) $.
+\Question Le maintien en contact des sphères suppose $R>0$ la rupture  a lieu pour $R \le 0$. en injectant $(0')$ dans $(1)$ on a:
+\[
+  R = - G \frac{mM_j}{(d-r)^2}+G \frac{mM_j}{2d}\left(\frac{1}{d-r}+\frac{d-r}{(d+r)^2}\right) + G \frac{m^2}{4r^2}
+\]
+Avec un DL à l'ordre 1 en $r/d$ on a :
+\[
+  R\simeq \frac{-3GmM_jr}{d^3} +G \frac{m^2}{4r^2}
+\]
+
+La condition $R\le0$ conduit à $d\le d_{lim} \left(\frac{12M_j}{m}\right)^{1/3}r$, d'où:
+\[
+  \frac{d_{lim}}{R_J} = \left(\frac{12\mu_J}{\mu_c}\right)^{1/3} \simeq 2,5
+\]
+Il faut un passage très proche de la comète. C'est ce qui est arrivé à la comètre Shoemaler-Lévy 9 en 1994 : elle s'est brisé en plusieurs morceaux qui ont percuté ensuite la platète géante.
 \end{Answer}

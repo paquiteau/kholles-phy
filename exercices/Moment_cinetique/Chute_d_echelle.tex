@@ -1,5 +1,17 @@
 \begin{Exercise}[title=Chute d'échelle]
-	$O_x$ est un sol horizontale et $Oy$ un mur vertical. Une échelle verticale $AB$ de masse $m$, de longueur $L=2l$ et de moment d'inertie par rapport à l'axe $Oz: J_\Delta =\frac{1}{3}mL^2$ évolue dans le plan de la figure Initialement elle est verticale et cet équilibre instable est détruit de façon infinitésimale, ce qui signifie que sa vitesse initiale est quasi nulle.
+  $O_x$ est un sol horizontale et $Oy$ un mur vertical. Une échelle verticale $AB$ de masse $m$, de longueur $L=2l$ et de moment d'inertie par rapport à l'axe $Oz: J_\Delta =\frac{1}{3}mL^2$ évolue dans le plan de la figure Initialement elle est verticale et cet équilibre instable est détruit de façon infinitésimale, ce qui signifie que sa vitesse initiale est quasi nulle.
+  \begin{center}
+    \begin{tikzpicture}
+      \draw[-latex] (0,0) node[left]{O} -- ++(4,0) node[below]{$O_x$};
+      \draw[-latex] (0,0) node[below]{A} -- ++(0,4) node[left]{$O_y$};
+      \draw[decorate,decoration={border,amplitude=-0.2cm,segment length=0.2cm}] (0,0) --(4,0);
+      \draw[decorate,decoration={border,amplitude=0.2cm,segment length=0.2cm}] (0,0) --(0,4);
+      \draw[very thick] (0,0) -- ++(60:3)node[left]{B};
+      \draw[-latex] (1,0) arc(0:60:1) node[midway,right]{$\alpha$};
+      \draw[-latex] (4,3) -- (4,2)node[midway,left]{$\overrightarrow{g}$};
+    \end{tikzpicture}
+  \end{center}
+  
 	L'extrémité $A$ peut tourner librement en $O$ sans frottement.
 	\Question Déterminer les expressions de $\dot{\alpha},\ddot{\alpha}$ en fonction de $g,l,\alpha$.
 	\Question Calculer tant que $A$ est en $O$, les composantes $R_x$ et $R_y$ de la force de contact s'exerçant sur la tige; commentaires.

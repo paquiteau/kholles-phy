@@ -7,7 +7,28 @@
 \end{Exercise}
 \begin{Answer}
 
-	SCHEMA
+  Pour la position (1) accroupie et (2) la position relevée:
+  \begin{center}
+    \begin{tikzpicture}
+      \node (O) at(0,0) {$\bullet$};
+      \node[above] at (O) {$\Delta$};
+      \draw[dashed] (O) -- (-110:5);
+      \draw[dashed] (O) -- ++(0,-5);
+      \draw[dashed] (O) -- (-70:5);
+      \draw (0,-1)  arc(-90:-110:1) node[midway,below]{$\theta_0$};
+      \draw (0,-1)  arc(-90:-70:1) node[midway,below]{$\theta_1$};
+      \draw[very thick] (0,-5) to node[currarrow,rotate=90]{}
+      ++(0,1) arc(-90:-110:4) node[midway,currarrow,rotate=170]{}
+      to node[currarrow,rotate=-110]{}
+      ++(-110:1) arc(-110:-90:5)node[midway,currarrow,rotate=-10]{}
+      arc(-90:-70:5)node[midway,currarrow,rotate=-170]{}
+      to node[currarrow,rotate=-70]{} ++(-70:-1)
+      arc(-70:-90:4)node[midway,currarrow,rotate=10]{}
+      ;
+      \node[below] at (-100:5.5){\it position 1};
+      \node[below] at (-80:5.5){\it position 2};
+    \end{tikzpicture}
+  \end{center}
 
 	\Question On a $a_1 > a_2$ et $J_1 >J_2 $ donc $K< 1$
 	On passe deux fois debout au milieux pour une oscillation !
