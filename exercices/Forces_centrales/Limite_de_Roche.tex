@@ -18,8 +18,8 @@ On cherche à déterminer la distance en dessous de laquelle une comète s'appro
       \end{tikzpicture}
     \end{center}
 \Question Établir que le mouvement du centre d'inertie de la comète est uniforme puis déterminer l'expression de $\omega^2$ carré de la vitesse angulaire du mouvement.
-\Question On note $R$ la réaction de la sphère  de la comète la plus proche de jupiter sur la sphère la plus éloignée. À quelle condition le contact entre les deux sphères est-il rompu , à quelle distance $d_lim$ cela arrive t-il?
-\Question faire l'application numérique de $\frac{d_lim}{R_J}$.
+\Question On note $R$ la réaction de la sphère  de la comète la plus proche de jupiter sur la sphère la plus éloignée. À quelle condition le contact entre les deux sphères est-il rompu , à quelle distance $d_{lim}$ cela arrive t-il?
+\Question faire l'application numérique de $\frac{d_{lim}}{R_J}$.
 
 \emph{Données : \gdr{M_j}{1,9e27}{kg}; \gdr{R_j}{7,1e4}{km}; \gdr{\mu_c}{1e3}{\kg\per\m\cubed}}
 \end{Exercise}
@@ -28,16 +28,16 @@ On cherche à déterminer la distance en dessous de laquelle une comète s'appro
   \[
     -(2m)\omega^2d = -G \frac{mM_j}{(d-r)^2} - G \frac{mM_j}{(d+r)^2} \implies
     \omega^2 = \frac{GM_j}{2d} \left[
-      \frac{1}{(d-r)^2} + \frac{1}{(d+r)^2}\right] \tag{(0')}
+      \frac{1}{(d-r)^2} + \frac{1}{(d+r)^2}\right] \tag{0'}
   \]
 
   \Question La sphère de gaucje (1) subit l'attraction de Jupiter, l'attraction de la sphère de droite et la réaction $-\overrightarrow{R} = R \vec{u_r}$. de la sphère (2), d'où:
 \[
-  -m \omega^2(d-r) = -G \frac{mM_j}{(d-r)^2}+ G \frac{m^2}{(2r)^2} - R \tag{(1)}
+  -m \omega^2(d-r) = -G \frac{mM_j}{(d-r)^2}+ G \frac{m^2}{(2r)^2} - R \tag{1}
 \]
 On peux faire de même avec la sphère (2) subit l'attraction de Jupiter,celle de la sphère (1) et  la réaction opposée:
 \[
--m \omega^2(d+r) = -G \frac{mM_j}{(d-r)^2}- G \frac{m^2}{(2r)^2} + R \tag{(2)}
+-m \omega^2(d+r) = -G \frac{mM_j}{(d-r)^2}- G \frac{m^2}{(2r)^2} + R \tag{2}
 \]
 On a $(1)+(2) = (0) $.
 \Question Le maintien en contact des sphères suppose $R>0$ la rupture  a lieu pour $R \le 0$. en injectant $(0')$ dans $(1)$ on a:
