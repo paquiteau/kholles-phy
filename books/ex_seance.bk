@@ -2,7 +2,7 @@
 "template": "seance.tmpl",
 "title": "Colles de Physique",
 "subtitle": "Exercices et Solutions",
-"bookoptions": [""],
+"bookoptions": ["oneexerciseperpage"],
 "exerciseoptions": ["noanswer"],
 "chapters" : ["Osc_harm",
               "Propag_signal"]
