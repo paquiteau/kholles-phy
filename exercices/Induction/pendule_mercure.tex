@@ -1,0 +1,73 @@
+\begin{Exercise}[title=Pendule]
+  Une barre conductrice de longueur $l$ et de masse $m$ peux tourner sans frottement autour d'un axe $Oz$ perpendiculaire au plan de la figure.
+  L'autre extrémité de la barre baigne dans un bassin de mercure.
+
+  L'ensemble est soumis à un champ $\vec{B} = B\vec{u_{z}}$ statique et uniforme. On se place dans le cadre des petites oscillations. À $t0$ on lache la barre d'une position $\theta=\theta_{0}$.
+  \Question Établir une équation différentielle reliant $\theta$ et ses dérivées temporelles.
+  \Question Discuter de la nature du mouvement selon la valeur de R.
+  \Question Que se passe-t-il si l'on change R en une inductance L?
+  \Question Que se passe-t-il si l'on change R en un condensateur C?
+  \begin{center}
+  \begin{tikzpicture}
+    \draw(0,0)node[above]{O} -- ++(-1,0) to[R,label=$R$] ++(0,-3);
+    \draw[dashed](0,0) -- (0,-1);
+    \draw(0,-0.7) arc(-90:-60:0.7)node[below]{$\theta_{0}$};
+    \draw(0,0) -- ++(-60:3.5);
+    \draw (-1.5,-2) -- ++(0,-1.5) -| ++(4,1.5);
+    \draw[dashed] (-1.5,-2.5) -- ++ (4,0) node[midway,below]{Hg};
+   \end{tikzpicture}
+  \end{center}
+\end{Exercise}
+\begin{Answer}
+  \Question
+  \begin{itemize}
+    \item Équation mécanique:
+      La tige est soumise au poids, la force de laplace et la réaction.
+      On applique le TMC: avec le moment d'inertie de la barre $J_{0}= \frac{ml^{2}}{3}$.
+      On a donc $J_{0}\ddot{\theta} = \Gamma_{l}+\Gamma_{P}$
+      Avec:
+      \begin{itemize}
+        \item $\Gamma_{P}= -mg\sin(\theta)\vec{z}$
+        \item $\Gamma_{l}= \int_{O}^{L}(i\vec{dl}\wedge \vec{B})\cdot\vec{z} = \int_{O}^{L} -i Br\d r = - \frac{iBl^{2}}{2}$
+      \end{itemize}
+      On a donc:
+      \[
+      J_{0}\ddot{\theta}= -\frac{il^{2}B}{2}-\frac{mgl\sin(\theta)}{2}
+      \]
+    \item Équation électrique
+      On un circuit mobile dans un champ fixe.
+      \[
+      e  = \int_{0}^{L}(\vec{v}\wedge\vec{B})\d\vec{OM} = \int_{0}^{L} \dot{\theta}B\vec{OM}\d\vec{OM} = \frac{\dot{\theta}Bl^{2}}{2}
+      \]
+    \item Couplage
+      On a ensuite $e=Zi$ soit
+      \[
+\boxed{\ddot{\theta} + \frac{3B^{2}l^{2}}{4mZ}\dot{\theta}+\frac{3g}{2l}\sin(\theta)=0}
+      \]
+
+   \end{itemize}
+      \Question
+      On étudie le polynome caractéristique de l'équation différentielle. On a $\Delta = \left(\frac{3B^{2}l^{2}}{4mR}\right)^{2}-6\omega_{0}^{2}$ avec $\omega_{0}^{2}=\frac{g}{l}$
+      \begin{itemize}
+        \item $\Delta >0 $ Soit $R >R_{c}=\frac{\sqrt{6}}{8}\frac{B^{2}l^{2}}{m\omega_{0}}$
+          On a des racines réelles, les solutions sont de la forme
+          \[
+          \theta(t)= Ae^{r_{1}t}+Be^{r_{2}t}
+          \]
+        \item $\Delta=0$
+          \[
+          \theta(t) = (At+B)e^{rt} \text{ avec } r= \frac{\omega_{0}\sqrt{6}}{2}
+          \]
+        \item $\Delta<0$
+          \[
+          \theta(t)= e^{-\alpha t}(A\cos(\omega t)+B\sin(\omega t)) \text{ avec } \alpha =\frac{R_{c}\omega_{0}\sqrt{6}}{R} \text{ et } \omega = \sqrt{6}\omega_{0}\sqrt{1-\frac{R_{c}^{2}}{R^{2}}}
+          \]
+      \end{itemize}
+      \Question On a $Z= jL\omega$ soit $e = L \deriv[i]{t} = \frac{\dot{\theta}Bl^{2}}{2}$
+    soit:
+    \[
+      \ddot{\theta} \frac{3}{2}\omega_{0}^{2}\sin(\theta)+\frac{3B^{2}l^{2}}{4mL}\theta = \frac{3B^{2l^{2}}}{4mL}\theta_{0}.
+    \]
+
+    La position d'équilibre vérifie donc:
+    \end{Answer}

@@ -1,0 +1,36 @@
+\begin{Exercise}[title=Rail de Laplace Vertical]
+  On considère un dispositif de rail de LAplace vertical dans lequel une bare Métallique $PQ$ de masse $m$ peut glisser sans frottement le long de deux rails verticaux distatn de $a$.
+
+  La resistance totale du circuite est notée $R$ et indépendante de la position de la barre. Dans l'espace où peux se déplacer la barre règne un champ magnétique stationnaire et uniforme $\vec{B}=B\vec{y}$.
+  \Question Écrire l'équation électrique du système
+  \Question Écrire l'équation mécanique du système
+  \Question En déduire $v(t)$  et $i(t)$.
+  \Question Quelle condition doit vérifiée $R$ pour que la barre tombe ?
+  \Question Déterminer la vitesse limite prise par la barre.
+  \begin{center}
+    \begin{tikzpicture}
+      \draw (0,0) to[V,v=$U_{0}$] ++(2,0) to[R,l=$R$] ++(0,-2) -- ++(0,-2);
+      \draw (0,0) -- ++(0,-4);
+      \draw[thick] (0,-2.9)node[left]{P} -- ++(2.2,0) node[right]{Q};
+      \draw[-latex] (-1,-1) -- ++ (0,-0.5) node[midway,left]{$\vec{g}$};
+      \node (B) at (1,-2){$\odot$};
+      \node[above=0.2em] at (B) {$\vec{B}$};
+    \end{tikzpicture}
+  \end{center}
+  \emph{Données: m=0.5g, $U_{0}$=1.5V, $B=0.5T$, $R=8\Omega$, $a=5$cm}
+\end{Exercise}
+\begin{Answer}
+  \Question $U_{0} = Ri-e =Ri+\deriv[\phi]{t}=Ri+aBv$
+  \Question $ m \deriv[v]{t} = mg - iBa$ (sur $\vec{z}$)
+  \Question $\deriv[v]{t}+\frac{a^{2}B^{2}}{mR}v = g-\frac{BaU_{0}}{mR}$
+  Soit :
+  \[
+    v(t)= \tau(g-\frac{BaU_{0}}{mR})(1-exp(-t/\tau))\text{ avec } \tau= \frac{mR}{a^{2}B^{2}}
+  \]
+  et
+  \[
+    i(t)= \frac{m}{Ba}(1-exp(-t/\tau))
+  \]
+  \Question Pour que la barre tombe il faut que $v>0$ ie $R> \frac{BaU_{0}}{mg}=7.6\Omega$.
+  \Question $v_{lim}=\tau (g-\frac{BaU_{0}}{mR})=2.7m/s$
+\end{Answer}
